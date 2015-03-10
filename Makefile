@@ -15,4 +15,4 @@ deploy: compile upload
 update: pull deploy
 
 listen: # requires $FISH_SECRET
-	gitfish -p 8766 --master -c "make update"
+	gitfish -p 8766 --branches master -c "make update"
