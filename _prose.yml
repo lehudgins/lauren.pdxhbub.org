@@ -2,7 +2,7 @@ prose:
   rooturl: 'public'
   siteurl: 'http://next.laurenhudgins.com'
   relativeLinks: 'http://next.laurenhudgins.com/links.jsonp.html'
-  media: 'media'
+  media: 'public/media'
   ignore:
     - _mixins.jade
     - _layout.jade
