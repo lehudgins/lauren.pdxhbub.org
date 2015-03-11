@@ -9,5 +9,10 @@ html(lang='en')
       header
         h1 
           mixin post_title(locals, current.path[current.path.length-1])                  
+        .search
+          form(action='http://google.com/cse' )
+            input(type='hidden', name='cx', value='012963123305395825585:f_lcpjzw7ke')
+            input(type='hidden', name='ie', value='UTF-8')
+            input(type='text', name='q')
       .content
         != yield
