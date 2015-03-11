@@ -5,5 +5,9 @@
   "sitemap": {
     "layout": false,
     "index": false
+  },
+  "links": {
+    "layout": false,
+    "index": false
   }
 }
