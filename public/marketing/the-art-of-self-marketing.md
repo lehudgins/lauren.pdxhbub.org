@@ -4,7 +4,7 @@ Ooligan is happy to market our authors to the best of our ability as a small pre
 
 ![Collaboration](http://laurenhudgins.com/wp-content/uploads/2014/02/collaboration-300x196.jpg)
 
-Without a website, you have no way to greet curious internet wanderers. Perhaps they heard an interview with you and want to know more. Unless you have a personal internet presence, your audience will have no way to look you up. They’ll have to rely on what others have said about you. Your website should display what titles you have written, an “About Me” section for biographical information, and ordering information for your books. [Here](http://bookmarketingmaven.typepad.com/book_marketing_maven/2011/10/whats-the-most-important-thing-on-an-author-website.html "Important website") and [here](http://janefriedman.com/2012/02/27/effective-author-website/ "effective author website") is some advice on the content of a useful author’s website.
+Without a website, you have no way to greet curious internet wanderers. Perhaps they heard an interview with you and want to know more. Unless you have a personal internet presence, your audience will have no way to look you up. They’ll have to rely on what others have said about you. Your website should display what titles you have written, an &ldquo;About Me&rdquo; section for biographical information, and ordering information for your books. [Here](http://bookmarketingmaven.typepad.com/book_marketing_maven/2011/10/whats-the-most-important-thing-on-an-author-website.html "Important website") and [here](http://janefriedman.com/2012/02/27/effective-author-website/ "effective author website") is some advice on the content of a useful author’s website.
 
 Unless you have the budget to hire a fancy web designer, keep your website simple and easily navigable. You’ll have to set up your domain name and hosting. It’s acceptable to simply have a blog as a website.
 
@@ -30,4 +30,4 @@ C. Hope Clark is the founder of [Funds for Writers](http://www.fundsforwriters.c
 
 **Dana Lynn Smith**
 
-Hope Clark recommends the books of Dana Lynn Smith, [The Savvy Book Marketer](http://bookmarketingmaven.typepad.com/ "Marketing resource"). She wrote How To Get Your Book Reviewed. Smith offers a number of ebooks on self-marketing on her website. She frequently guest blogs her wisdom. Here is her guest post on Hope’s blog “[Learn to Think Like An Authorpreneur](http://hopeclark.blogspot.com/2011/10/learn-to-think-like-authorpreneur.html "Author Advice").”
+Hope Clark recommends the books of Dana Lynn Smith, [The Savvy Book Marketer](http://bookmarketingmaven.typepad.com/ "Marketing resource"). She wrote How To Get Your Book Reviewed. Smith offers a number of ebooks on self-marketing on her website. She frequently guest blogs her wisdom. Here is her guest post on Hope’s blog &ldquo;[Learn to Think Like An Authorpreneur](http://hopeclark.blogspot.com/2011/10/learn-to-think-like-authorpreneur.html "Author Advice").&rdquo;

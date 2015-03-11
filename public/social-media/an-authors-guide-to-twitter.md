@@ -1,4 +1,4 @@
-Consider Twitter a form of “microblogging.” You have 140 characters to make announcements, express opinions, and promote projects each tweet; so use them wisely. This is a guide to Twitter for beginners. It will help you attract attention, build a solid base of followers, and host electronic conversations.
+Consider Twitter a form of &ldquo;microblogging.&rdquo; You have 140 characters to make announcements, express opinions, and promote projects each tweet; so use them wisely. This is a guide to Twitter for beginners. It will help you attract attention, build a solid base of followers, and host electronic conversations.
 
 ### What are your Twitter Goals?
 
@@ -10,12 +10,12 @@ You may want to use twitter to tell your friends and fans about your personal li
 
 ### Choosing a Username
 
-The most important thing is to pick a name that is identifiable and searchable. If available, use your first and last name (or your pseudonym). For example, “JonathanJones,” “JonJones,” or “Jon_Jones.” This looks professional, makes it clear to whom the account belongs, and is easy to locate on Google or another search engine. If you are setting up an account for a specific project, use the title or name of that project.
+The most important thing is to pick a name that is identifiable and searchable. If available, use your first and last name (or your pseudonym). For example, &ldquo;JonathanJones,&rdquo; &ldquo;JonJones,&rdquo; or &ldquo;Jon_Jones.&rdquo; This looks professional, makes it clear to whom the account belongs, and is easy to locate on Google or another search engine. If you are setting up an account for a specific project, use the title or name of that project.
 
 ### Holding Twitter Conversations
 
 **[![Transmit Culture conversation](http://laurenhudgins.com/wp-content/uploads/2014/02/spencer-300x226.jpg)](http://laurenhudgins.com/wp-content/uploads/2014/02/spencer.jpg)@username**
-An **@** in a message links the following word as a twitter username. Usernames are always one word. This will notify a user that you are tweeting to them or about them. It shows up in their list of “Interactions.”
+An **@** in a message links the following word as a twitter username. Usernames are always one word. This will notify a user that you are tweeting to them or about them. It shows up in their list of &ldquo;Interactions.&rdquo;
 
 The following tweets are all different.
 
@@ -51,7 +51,7 @@ A good policy is to tweet a #FF with two names every Friday. It’s a great oppo
 
 **Retweeting**- repeat what another user has said.
 
-There are two ways to retweet. The *old way* involved the letters “RT” followed by the name of the person you were retweeting and the message.
+There are two ways to retweet. The *old way* involved the letters &ldquo;RT&rdquo; followed by the name of the person you were retweeting and the message.
 
 Example: RT @lehudgins Wow! The street is filled with marbles! Look out! http://wtfpdx.com/marbles
 
@@ -62,12 +62,12 @@ Example: RT @lehudgins Wow! The street is filled with marbles! Look out! http://
 
 -   Difficult to track movement of information
 
--   It shows up as a “mention” rather than a retweet
+-   It shows up as a &ldquo;mention&rdquo; rather than a retweet
 
-For the *new version* of retweeting, the function is built in. Hover over the message and hit “Retweet.” (The symbol is a box made of two arrows)
+For the *new version* of retweeting, the function is built in. Hover over the message and hit &ldquo;Retweet.&rdquo; (The symbol is a box made of two arrows)
 
 -   Simple! No cutting and pasting. Links are seamless.
--   Easier to track movement of information by viewing “Retweets”
+-   Easier to track movement of information by viewing &ldquo;Retweets&rdquo;
 
 -   The retweet shows up on the timeline of your followers with the originators name and picture. Your name appears in very tiny, dim font.
 -   Exact duplication. Can’t modify the message in anyway.
@@ -76,19 +76,19 @@ A good policy is to retweet one person per day per feed using the old method. Li
 
 **[![student with laptop](http://laurenhudgins.com/wp-content/uploads/2014/02/after-exec-300x275.jpg)](http://laurenhudgins.com/wp-content/uploads/2014/02/after-exec.jpg)Via or h/t**
 
-It’s polite to credit where you get information. Use “via” or “h/t” (meaning “hat tip to) when you want to share what others have tweeted, but don’t want to quote them. This is most often used with sharing links.
+It’s polite to credit where you get information. Use &ldquo;via&rdquo; or &ldquo;h/t&rdquo; (meaning &ldquo;hat tip to) when you want to share what others have tweeted, but don’t want to quote them. This is most often used with sharing links.
 
 Example: Marbles are flooding Portland! http://wtfpdx.com/marbles (via @lehudgins)
 
 **Mentions and Replies**
 
-When someone adds an @ before your screen name in a tweet, it will show up as a mention in your Interactions area. Replies also appear as mentions. To reply to someone’s tweet, hover over the message and click on “reply.” (The symbol looks like a curved arrow pointing left.) It will appear on twitter feeds with their username in the beginning of the tweet.
+When someone adds an @ before your screen name in a tweet, it will show up as a mention in your Interactions area. Replies also appear as mentions. To reply to someone’s tweet, hover over the message and click on &ldquo;reply.&rdquo; (The symbol looks like a curved arrow pointing left.) It will appear on twitter feeds with their username in the beginning of the tweet.
 
 Example: @lehudgins Thanks for the retweet!
 
 A tweet beginning with a username (such as a reply) will only show up on the twitter feed of you, that person, and anyone who follows both of you. In contrast, mentioning a user in any part of the tweet other than the beginning will appear to anyone who follows you. Replies are not private, while they will not automatically appear in irrelevant feeds, anyone can read replies on your twitter page.
 
-Be sure to monitor your mentions. At the top of your timeline, select the tab labeled “Interactions.” Most of the time your mentions and replies can be ignored, like “Thanks for the RT!” Because mentions and replies clutter your twitter feed or page, only respond selectively. If you are trying to build followers, you can be more generous. Replies and mentions build a sense of community and personalization.
+Be sure to monitor your mentions. At the top of your timeline, select the tab labeled &ldquo;Interactions.&rdquo; Most of the time your mentions and replies can be ignored, like &ldquo;Thanks for the RT!&rdquo; Because mentions and replies clutter your twitter feed or page, only respond selectively. If you are trying to build followers, you can be more generous. Replies and mentions build a sense of community and personalization.
 
 Some messages you get will be marketing or promotional attempts (hey @lehudgins Lauren, check out my video of a fat and lazy dog!). These generally won’t be interesting and could be spam, but use your discretion based on the source. There’s a slim chance it might be something brilliant and useful.
 
@@ -106,7 +106,7 @@ Twitter will try to shorten long links to fit within your 140 character limit, b
 
 **Shorthand**
 
-Using texting shorthand, such as “u” for “you,” or dropping vowels appears unintelligent and is unprofessional. Some more formal shorthand may be acceptable (“w/” for “with”, “w/o” for “without”, “b/c” for “because”). To stay within your 140 character limit, get creative. Is there another way to say what you’re trying to say with fewer words? Try using phrases rather than sentences. Drop unnecessary pronouns, lose articles (the/a/an), use “&” or commas instead of “and.”
+Using texting shorthand, such as &ldquo;u&rdquo; for &ldquo;you,&rdquo; or dropping vowels appears unintelligent and is unprofessional. Some more formal shorthand may be acceptable (&ldquo;w/&rdquo; for &ldquo;with&rdquo;, &ldquo;w/o&rdquo; for &ldquo;without&rdquo;, &ldquo;b/c&rdquo; for &ldquo;because&rdquo;). To stay within your 140 character limit, get creative. Is there another way to say what you’re trying to say with fewer words? Try using phrases rather than sentences. Drop unnecessary pronouns, lose articles (the/a/an), use &ldquo;&&rdquo; or commas instead of &ldquo;and.&rdquo;
 
 For example:
 I heard the dogs are planning to be fat and lazy. -> Heard dogs planning to be fat, lazy.
