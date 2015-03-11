@@ -31,5 +31,3 @@ mixin post_summary(post, slug, path)
     if post && post.date
       mixin date_label(post.date)
     div.excerpt!= excerpt(path+'/'+slug)
-
-post.description
