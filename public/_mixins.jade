@@ -16,7 +16,10 @@ mixin link(post, slug, path, icon)
 - }
 
 - var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-- function format_date(d){var D = new Date(d); return months[D.getMonth()]+' '+D.getDate()+', '+D.getFullYear()}
+- function format_date(d){
+  - var D = new Date(d);
+  - return months[D.getMonth()]+' '+D.getDate()+', '+D.getFullYear()
+- }
 
 mixin date_label(d)
   div.date(data-raw=d)= format_date(d)

@@ -7,9 +7,7 @@ html
   body
     .container
       header
-        h1 Lauren Hudgins.com
-        h3 The source for Lauren Hudgins news and shopping
-        h2
-          mixin post_title(locals, current.path[current.path.length-1])
+        h1 
+          mixin post_title(locals, current.path[current.path.length-1])                  
       .content
         != yield
