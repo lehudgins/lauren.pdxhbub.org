@@ -1,5 +1,9 @@
 {
   "index": {
     "title": "Lauren's blog" 
+  },
+  "sitemap": {
+    "layout": false,
+    "index": false
   }
 }
