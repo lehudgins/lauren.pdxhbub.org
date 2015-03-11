@@ -1,12 +1,15 @@
 prose:
-  rooturl: 'public'
   siteurl: 'http://next.laurenhudgins.com'
   relativeLinks: 'http://next.laurenhudgins.com/links.jsonp.html'
-  media: 'public/media'
+  media: 'media'
   ignore:
+    - Makefile
+    - _harp.yml
+    - _prose.yml
     - _mixins.jade
     - _layout.jade
     - 404.jade
+    - .htaccess
     - sitemap.xml.jade
     - links.jsonp.jade
-    - .htaccess
+    - google281b380f7dbceb01.html
