@@ -1,0 +1,12 @@
+prose:
+  rooturl: 'public'
+  siteurl: 'http://next.laurenhudgins.com'
+  relativeLinks: 'http://next.laurenhudgins.com/links.jsonp'
+  media: 'media'
+  ignore:
+    - _mixins.jade
+    - _layout.jade
+    - 404.jade
+    - sitemap.xml.jade
+    - links.jsonp.jade
+    - .htaccess
