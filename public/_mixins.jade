@@ -1,0 +1,32 @@
+mixin post_title(post, slug)
+  if post.title
+    = post.title
+  else
+    = slug.replace(/-/g,' ').replace(/([^\W_]+[^\s-]*) */g,function(w){return w.charAt(0).toUpperCase() + w.substr(1);})
+
+mixin link(post, slug, path, icon)
+  a(href="#{path || ''}/#{ slug }" class="post-link")
+    mixin post_title(post, slug)
+
+
+- function excerpt(path) {
+  - var content = partial(path);
+  - if(content.indexOf("<!-- more -->") == -1) return content;
+  - else return content.split("<!-- more -->")[0];
+- }
+
+- var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+- function format_date(d){var D = new Date(d); return months[D.getMonth()]+' '+D.getDate()+', '+D.getFullYear()}
+
+mixin date_label(d)
+  div.date(data-raw=d)= format_date(d)
+  | 
+
+mixin post_summary(post, slug, path)
+  .post-summary
+    mixin link(post, slug, path)
+    if post && post.date
+      mixin date_label(post.date)
+    div.excerpt!= excerpt(path+'/'+slug)
+
+post.description

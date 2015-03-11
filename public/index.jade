@@ -1,2 +1,5 @@
-h1 Lauren Hudgins.com
-h3 The source for Lauren Hudgins news and shopping
+include _mixins
+
+.posts.recent-posts
+  for post, slug in public.posts._data
+    mixin post_summary(post, slug, '/posts')

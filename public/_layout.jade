@@ -1,6 +1,15 @@
-doctype
+!!! 5
+include _mixins
 html
-  head
+  html(lang='en')
+    link(rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css")    
     link(rel="stylesheet" href="/main.css")
   body
-    != yield
+    .container
+      header
+        h1 Lauren Hudgins.com
+        h3 The source for Lauren Hudgins news and shopping
+        h2
+          mixin post_title(locals, current.path[current.path.length-1])
+      .content
+        != yield
