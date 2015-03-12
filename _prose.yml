@@ -3,13 +3,13 @@ prose:
   relativeLinks: 'http://next.laurenhudgins.com/links.jsonp.html'
   media: 'media'
   ignore:
-    - Makefile
+    - _includes
+    - .gitignore
+    - .htaccess
+    - 404.jade
     - _harp.yml
     - _prose.yml
-    - _mixins.jade
-    - _layout.jade
-    - 404.jade
-    - .htaccess
-    - sitemap.xml.jade
     - links.jsonp.jade
     - google281b380f7dbceb01.html
+    - Makefile
+    - sitemap.xml.jade
