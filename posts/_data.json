@@ -3,4 +3,8 @@
     "title": "First post",
     "date": "2015-03-10"
   }
+  "second-post": {
+    "title": "Second post",
+    "date": "2015-03-10"
+  }
 }
