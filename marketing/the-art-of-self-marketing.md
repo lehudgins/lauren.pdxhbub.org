@@ -1,4 +1,4 @@
-Ooligan is happy to market our authors to the best of our ability as a small press. But any book will be much more successful if the writer markets it, too. There are many books and websites out there with advice for self-marketing. Here are some common themes:
+I originally wrote this guide to self marketing for the authors published by Ooligan Press, but it should be useful any writers looking for help promoting their upcoming book.
 
 ### Website
 
