@@ -29,7 +29,7 @@
 - function index(path, section){
   - if (section === undefined) section = public;
   - if (path.length == 0) return section;
-  - if (!section[path[0]]) return false;
+  - if (section[path[0]] == undefined) return false;
   - return index(path.slice(1), section[path[0]]);
 - }
 
@@ -80,9 +80,11 @@ mixin post_summary(path)
     mixin link(path)
     mixin date_label(index(path).date)
     div.excerpt!= excerpt(path)
-  
+
 mixin nav(path)
-  each post,slug in index(path)['_data']
-    if post.index !== false
-      mixin link(path.concat(slug))
+  - var idx = index(path)['_data']
+  if idx
+    each post,slug in idx
+      if post.index !== false
+        mixin link(path.concat(slug))
   
