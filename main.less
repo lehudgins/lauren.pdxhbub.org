@@ -1,16 +1,50 @@
+// colors
+
+@dusk: #5C6063;
+@maroon: #9E5F68;
+@pale: #EFDCD3;
+@color4: #6B575E;
+@color5: #AA979E;
+@light-plum: #A2727C;
+@peach: #FED5CC;
+@color8: #E4A196;
+@fuchia: #B9006E;
+@green: #0D7D86;
+
+@brand-primary: @light-plum;
+@brand-accent: @fuchia;
+/* @brand-primary: @green; */
+@white: lighten(@pale, 8%);
+@black: darken(@green, 8%);
+
 body{
-  font-family: "Helvetica";
+  font-family: 'Quattrocento Sans', sans-serif;
   padding: 50px 20px 0;
   margin: 0;
+  color: @black;
+  background-color: @white;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Quattrocento" serif;
+/*   line-height: 1.2em; */
 }
 
 h1{
+  border-bottom: 2px solid @peach;
   text-align: center;
   font-size: 65px;
   line-height: 1.2em;
   padding: 20px 0;
 }
 
+h2 {
+  color: @brand-accent;
+}
+
 h3{
-  font-weight: 300;
+  color: @maroon;
+}
+h4{
+  color: @green;
 }
