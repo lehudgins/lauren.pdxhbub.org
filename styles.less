@@ -17,8 +17,15 @@
 @white: lighten(@pale, 8%);
 @black: darken(@green, 8%);
 
+.sans() {
+  font-family: 'Quattrocento Sans', sans-serif;  
+}
+.serif() {
+  font-family: "Quattrocento" serif;
+}
+
 body{
-  font-family: 'Quattrocento Sans', sans-serif;
+  .sans;
   padding: 50px 20px 0;
   margin: 0;
   color: @black;
@@ -26,8 +33,7 @@ body{
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: "Quattrocento" serif;
-/*   line-height: 1.2em; */
+  .serif;
 }
 
 h1{
@@ -49,4 +55,25 @@ h3{
 }
 h4{
   color: @green;
+}
+
+a.active {
+  background: @pale;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  margin-bottom: 10px;
+  // line-height: 1.2em;
+  // .serif;
+  border-bottom: 1px solid @peach;
+  > * {
+    padding: 10px;
+  }
+  > a {
+    text-decoration: none;
+    font-size: 1.5em;
+  }
 }

@@ -12,12 +12,12 @@ html(lang='en')
       //- include _includes/debug
       header
         h1= title(current.path)                  
-        .search
-          form(action='http://google.com/cse' )
-            input(type='hidden', name='cx', value='012963123305395825585:f_lcpjzw7ke')
-            input(type='hidden', name='ie', value='UTF-8')
-            input(type='text', name='q')
         nav.primary
+          .search
+            form(action='http://google.com/cse' )
+              input(type='hidden', name='cx', value='012963123305395825585:f_lcpjzw7ke')
+              input(type='hidden', name='ie', value='UTF-8')
+              input(type='text', name='q')
           mixin nav([])
         if current.path.length > 1
           nav.section
