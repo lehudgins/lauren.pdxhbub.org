@@ -1,0 +1,11 @@
+script.
+  var showDebug = function(){
+    document.getElementById('debug').style.display = 'block';
+    return false;
+  }
+a(href="#", onclick="showDebug()") open debug panel
+.well#debug(style="display:none;")
+  h4 globals
+  pre= JSON.stringify(locals, null, 2)
+  h4 current
+  pre= JSON.stringify(current, null, 2)
