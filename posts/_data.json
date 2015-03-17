@@ -6,5 +6,8 @@
   "second-post": {
     "title": "Second post",
     "date": "2015-03-10"
+  },
+    "just-a-test": {
+      "date": "2015-03-11"
   }
 }
