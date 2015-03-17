@@ -23,21 +23,36 @@
   - };
   - return r;
 - }
+- function href(path){
+  - return '/' + path.join('/')
+- }
+- function metadata(path, section){
+  - if (section === undefined) section = public;
+  - if (path.length == 0) return section;
+  - return metadata(path.slice(1), section[path[0]]);
+- }
+- function slug(path) {return path.slice(-1)[0] || ''};
+- function slugToTitle(slug) {
+  - return slug.replace(/-/g,' ').replace(/([^\W_]+[^\s-]*) */g,function(w){
+    - return w.charAt(0).toUpperCase() + w.substr(1);
+  - })
+- };
+- function title(path) {
+  - return metadata(path).title || slugToTitle(slug(path))
+- };
+- function normalizePath(path) {
+  - return (slug(path) == 'index') ? path.slice(-1) : path;
+- }
+- function active(path) {
+  - // current.path starts with path
+  - return path.length <= current.path.length && href(current.path.slice(0, path.length)) == href(path);
+- }
 
-
-mixin post_title(post, slug)
-  if post.title
-    = post.title
-  else
-    = slug.replace(/-/g,' ').replace(/([^\W_]+[^\s-]*) */g,function(w){return w.charAt(0).toUpperCase() + w.substr(1);})
-
-mixin link(post, slug, path, icon)
-  a(href="#{path || ''}/#{ slug }" class="post-link")
-    mixin post_title(post, slug)
-
+mixin link(path, icon)
+  a(href=href(path) class="post-link"+(active(path)?" active":""))= title(path)
 
 - function excerpt(path) {
-  - var content = partial(path);
+  - var content = partial(path.join('/'));
   - if(content.indexOf("<!-- more -->") == -1) return content;
   - else return content.split("<!-- more -->")[0];
 - }
@@ -49,12 +64,19 @@ mixin link(post, slug, path, icon)
 - }
 
 mixin date_label(d)
-  div.date(data-raw=d)= format_date(d)
-  | 
+  if d
+    div.date(data-raw=d)= format_date(d)
+    | 
 
-mixin post_summary(post, slug, path)
+mixin post_summary(path)
   .post-summary
-    mixin link(post, slug, path)
-    if post && post.date
-      mixin date_label(post.date)
-    div.excerpt!= excerpt(path+'/'+slug)
+    mixin link(path)
+    mixin date_label(metadata(path).date)
+    div.excerpt!= excerpt(path)
+  
+mixin nav(path)
+  - var section = metadata(path);
+  each post,slug in section['_data']
+    if slug != "index" && post.index !== false
+      mixin link(path.concat(slug))
+  

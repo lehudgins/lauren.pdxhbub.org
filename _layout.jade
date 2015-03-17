@@ -2,8 +2,7 @@
 include _includes/mixins
 html(lang='en')
   head
-    title
-      mixin post_title(locals, current.path[current.path.length-1])
+    title= title(current.path)
     link(rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css")
     link(href='//fonts.googleapis.com/css?family=Quattrocento+Sans:400,400italic,700,700italic|Quattrocento:400,700' rel='stylesheet' type='text/css')
     link(rel="stylesheet" href="/main.css")
@@ -12,12 +11,15 @@ html(lang='en')
     .container
       //- include _includes/debug
       header
-        h1 
-          mixin post_title(locals, current.path[current.path.length-1])                  
-        .search
-          form(action='http://google.com/cse' )
-            input(type='hidden', name='cx', value='012963123305395825585:f_lcpjzw7ke')
-            input(type='hidden', name='ie', value='UTF-8')
-            input(type='text', name='q')
+        h1= title(current.path)                  
+        nav.primary
+          mixin nav([])
+          .search
+            form(action='http://google.com/cse' )
+              input(type='hidden', name='cx', value='012963123305395825585:f_lcpjzw7ke')
+              input(type='hidden', name='ie', value='UTF-8')
+              input(type='text', name='q')
+        nav.section
+          mixin nav(current.path.slice(0,1))
       .content
         != yield

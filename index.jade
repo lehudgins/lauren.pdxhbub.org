@@ -2,4 +2,4 @@ include _includes/mixins
 
 .posts.recent-posts
   for post, slug in public.posts._data
-    mixin post_summary(post, slug, '/posts')
+    mixin post_summary(['posts',slug])
