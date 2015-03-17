@@ -1,4 +1,4 @@
-I originally wrote this guide to self marketing for the authors published by Ooligan Press, but it should be useful any writers looking for help promoting their upcoming book.
+I originally wrote this guide to self marketing for the authors published by <a href="http://ooligan.pdx.edu/" target="_blank"> Ooligan Press</a>, but it should be useful any writers looking for help promoting their upcoming book.
 
 ### Website
 
