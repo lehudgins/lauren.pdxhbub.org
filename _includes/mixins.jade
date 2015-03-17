@@ -24,12 +24,19 @@
   - return r;
 - }
 - function href(path){
-  - return '/' + path.join('/')
+  - return '/' + normalize(path).join('/')
 - }
-- function metadata(path, section){
+- function index(path, section){
   - if (section === undefined) section = public;
   - if (path.length == 0) return section;
-  - return metadata(path.slice(1), section[path[0]]);
+  - if (!section[path[0]]) return false;
+  - return index(path.slice(1), section[path[0]]);
+- }
+
+- function post(path){
+  - if (path.length > 1) path = normalize(path);
+  - var section = index(path.slice(0,-1))
+  - return section && section._data && section._data[slug(path)] || {}
 - }
 - function slug(path) {return path.slice(-1)[0] || ''};
 - function slugToTitle(slug) {
@@ -38,10 +45,10 @@
   - })
 - };
 - function title(path) {
-  - return metadata(path).title || slugToTitle(slug(path))
+  - return post(path).title || slugToTitle(slug(path))
 - };
-- function normalizePath(path) {
-  - return (slug(path) == 'index') ? path.slice(-1) : path;
+- function normalize(path) {
+  - return (path.slice(-1)[0] == 'index') ? path.slice(0, -1) : path;
 - }
 - function active(path) {
   - // current.path starts with path
@@ -71,12 +78,11 @@ mixin date_label(d)
 mixin post_summary(path)
   .post-summary
     mixin link(path)
-    mixin date_label(metadata(path).date)
+    mixin date_label(index(path).date)
     div.excerpt!= excerpt(path)
   
 mixin nav(path)
-  - var section = metadata(path);
-  each post,slug in section['_data']
-    if slug != "index" && post.index !== false
+  each post,slug in index(path)['_data']
+    if post.index !== false
       mixin link(path.concat(slug))
   
