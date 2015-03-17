@@ -45,7 +45,7 @@
   - })
 - };
 - function title(path) {
-  - return post(path).title || slugToTitle(slug(path))
+  - return post(path).title || slugToTitle(slug(normalize(path)))
 - };
 - function normalize(path) {
   - return (path.slice(-1)[0] == 'index') ? path.slice(0, -1) : path;
