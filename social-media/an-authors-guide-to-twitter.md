@@ -14,7 +14,7 @@ The most important thing is to pick a name that is identifiable and searchable. 
 
 ### Holding Twitter Conversations
 
-**@username**
+#### @username
 An **@** in a message links the following word as a twitter username. Usernames are always one word. This will notify a user that you are tweeting to them or about them. It shows up in their list of &ldquo;Interactions.&rdquo;
 
 The following tweets are all different.
@@ -49,7 +49,7 @@ Example: For more inspiration, check out @lehudgins (local blogger) and @laura_h
 
 A good policy is to tweet a #FF with two names every Friday. It&rsquo;s a great opportunity to let other users know that you&rsquo;re interested in what they say and quite a nice compliment.
 
-**Retweeting**- repeat what another user has said.
+#### Retweeting- repeat what another user has said.
 
 There are two ways to retweet. The *old way* involved the letters &ldquo;RT&rdquo; followed by the name of the person you were retweeting and the message.
 
@@ -74,13 +74,13 @@ For the *new version* of retweeting, the function is built in. Hover over the me
 
 A good policy is to retweet one person per day per feed using the old method. Like #FF, retweeting lets Twitter uses know that we&rsquo;re paying attention and appreciate what they&rsquo;re saying. If you&rsquo;re using Twitter to network, it&rsquo;s great flattery. Vary who you retweet. Share the love and avoid looking like a copybot.
 
-**Via or h/t**
+#### Via or h/t
 
 It&rsquo;s polite to credit where you get information. Use &ldquo;via&rdquo; or &ldquo;h/t&rdquo; (meaning &ldquo;hat tip to) when you want to share what others have tweeted, but don&rsquo;t want to quote them. This is most often used with sharing links.
 
 Example: Marbles are flooding Portland! http://wtfpdx.com/marbles (via @lehudgins)
 
-**Mentions and Replies**
+#### Mentions and Replies
 
 When someone adds an @ before your screen name in a tweet, it will show up as a mention in your Interactions area. Replies also appear as mentions. To reply to someone&rsquo;s tweet, hover over the message and click on &ldquo;reply.&rdquo; (The symbol looks like a curved arrow pointing left.) It will appear on twitter feeds with their username in the beginning of the tweet.
 
@@ -92,11 +92,11 @@ Be sure to monitor your mentions. At the top of your timeline, select the tab la
 
 Some messages you get will be marketing or promotional attempts (hey @lehudgins Lauren, check out my video of a fat and lazy dog!). These generally won&rsquo;t be interesting and could be spam, but use your discretion based on the source. There&rsquo;s a slim chance it might be something brilliant and useful.
 
-**Direct Messages**
+#### Direct Messages
 
 Direct messages (DMs) are private. Only you and the person you are messaging can see them. You can only DM someone who follows you. Direct messages are considered more urgent than replies and mentions. There are few occasions when you would need to begin a conversation using a DM. Like mentions, if you get a DM from someone important in your industry or a question, you should answer. You can and will get spam in a DM. Someone has hacked the account of your contact.
 
-**Links**
+#### Links
 
 Twitter will try to shorten long links to fit within your 140 character limit, but it can still look messy. You may want to shorten it on your own before posting. Here are some websites that will create shorter links for you. Also, try the original source for an article, video, etc. They may have a share with twitter option that will create a shorter, direct link for you.
 
@@ -104,7 +104,7 @@ Twitter will try to shorten long links to fit within your 140 character limit, b
 -   [http://tinyurl.com/](http://tinyurl.com/ "Tiny url")
 -   [http://moourl.com/](http://moourl.com/ "Moo URL")
 
-**Shorthand**
+#### Shorthand
 
 Using texting shorthand, such as &ldquo;u&rdquo; for &ldquo;you,&rdquo; or dropping vowels appears unintelligent and is unprofessional. Some more formal shorthand may be acceptable (&ldquo;w/&rdquo; for &ldquo;with&rdquo;, &ldquo;w/o&rdquo; for &ldquo;without&rdquo;, &ldquo;b/c&rdquo; for &ldquo;because&rdquo;). To stay within your 140 character limit, get creative. Is there another way to say what you&rsquo;re trying to say with fewer words? Try using phrases rather than sentences. Drop unnecessary pronouns, lose articles (the/a/an), use &ldquo;&&rdquo; or commas instead of &ldquo;and.&rdquo;
 
