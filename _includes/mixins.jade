@@ -32,6 +32,16 @@
   - if (section[path[0]] == undefined) return false;
   - return index(path.slice(1), section[path[0]]);
 - }
+- function childs(path){
+  - var idx = index(path)['_data'];
+  - var children = {}
+  - for (var slug in idx) {
+    - if (idx[slug].index !== false) {
+      - children[slug] = idx[slug]
+    - }
+  - }
+  - return children;
+- }
 
 - function post(path){
   - if (path.length > 1) path = normalize(path);
@@ -58,8 +68,11 @@
 mixin link(path, icon)
   a(href=href(path) class="post-link"+(active(path)?" active":""))= title(path)
 
-- function excerpt(path) {
-  - var content = partial(path.join('/'));
+- function excerpt(path, partialPrefix) {
+  - if (partialPrefix) {
+    - path.unshift(partialPrefix)
+  - }
+  - var content = partial(path.join('/')) || "";
   - if(content.indexOf("<!-- more -->") == -1) return content;
   - else return content.split("<!-- more -->")[0];
 - }
@@ -75,16 +88,14 @@ mixin date_label(d)
     div.date(data-raw=d)= format_date(d)
     | 
 
-mixin post_summary(path)
+mixin post_summary(path, partialPrefix)
   .post-summary
     mixin link(path)
     mixin date_label(index(path).date)
-    div.excerpt!= excerpt(path)
+    div.excerpt!= excerpt(path, partialPrefix)
 
 mixin nav(path)
-  - var idx = index(path)['_data']
-  if idx
-    each post,slug in idx
-      if post.index !== false
-        mixin link(path.concat(slug))
+  - var children = childs(path)
+  each post,slug in children
+    mixin link(path.concat(slug))
   
