@@ -1,4 +1,7 @@
 {
+  "index": {
+    "index": false
+  },
   "first-post": {
     "title": "First post",
     "date": "2015-03-10"
@@ -7,7 +10,7 @@
     "title": "Second post",
     "date": "2015-03-10"
   },
-    "just-a-test": {
-      "date": "2015-03-11"
+  "just-a-test": {
+    "date": "2015-03-11"
   }
 }

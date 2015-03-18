@@ -1,6 +1,10 @@
 {
   "index": {
-    "title": "Lauren's blog" 
+    "title": "Lauren Hudgins",
+    "index": false
+  },
+  "blog": {
+    "title": "Blog" 
   },
   "publications": {
   },
