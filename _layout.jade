@@ -17,6 +17,7 @@ html(lang='en')
               input(type='hidden', name='ie', value='UTF-8')
               input(type='text', name='q' placeholder="search")
           mixin nav([])
+          a(href="http://prose.io/#prism-house/laurenhudgins.com") Edit
         if index(current.path.slice(0,1))['_data']
           nav.section
             mixin nav(current.path.slice(0,1))
