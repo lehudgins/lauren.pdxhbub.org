@@ -16,7 +16,7 @@ Yes, you really must. Twitter, Facebook, Google Plus, LinkedIn—these are some 
 
 ### Face-to-face
 
-[![Ooligan Students at the Willamette Writers Conference 2013](http://laurenhudgins.com/wp-content/uploads/2014/02/wwc2013-300x189.jpg)](http://laurenhudgins.com/wp-content/uploads/2014/02/wwc2013.jpg)Don&rsquo;t forget good old-fashion person-to-person charm. Meet people. Go to writing conferences and book fairs. Set up a booth at local events. Have coffee dates with other writers, people who work at bookstores, enthusiastic fans (they may blog about their day!), or anyone else who might want to promote you or buy your books.
+Don&rsquo;t forget good old-fashion person-to-person charm. Meet people. Go to writing conferences and book fairs. Set up a booth at local events. Have coffee dates with other writers, people who work at bookstores, enthusiastic fans (they may blog about their day!), or anyone else who might want to promote you or buy your books.
 
 Here are two resources that can help you with self-promotion.
 
