@@ -36,7 +36,7 @@ Because hashtags break up the flow of sentences, I recommend always putting them
 
 \#Hashtags and @usernames are not affected by punctuation at the end of the word. You can use as many exclamation points as you want, but I don&rsquo;t recommend it.
 
-**#FF or #FollowFriday**
+#### #FF or #FollowFriday
 (Not used as much in the past year, but still useful information.)
 
 On Friday list influential people on Twitter you follow.You often see something like this:
