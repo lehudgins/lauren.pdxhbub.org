@@ -1,4 +1,4 @@
-#A list of publications by Lauren Hudgins avaible online
+##A list of publications by Lauren Hudgins avaible online
 
 <a href="http://positiveimpactmagazine.pccopilots.com/2013/01/10/the-oregon-health-and-science-university-bike-incentive-program/#.Uy_RNVFQ_5o" target="_blank">The Oregon Health and Science University Bike Incentive Program</a>
 *Positive Impact Magazine* January 10, 2013
