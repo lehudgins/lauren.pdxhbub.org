@@ -9,6 +9,7 @@ prose:
     - 404.jade
     - _harp.yml
     - _prose.yml
+    - media
     - links.jsonp.jade
     - google281b380f7dbceb01.html
     - Makefile
