@@ -2,7 +2,7 @@ Consider Twitter a form of &ldquo;microblogging.&rdquo; You have 140 characters 
 
 ### What are your Twitter Goals?
 
-[![Nicole at Write to Publish](http://laurenhudgins.com/wp-content/uploads/2014/02/Nicole-200x309.jpg)](http://laurenhudgins.com/wp-content/uploads/2014/02/Nicole.jpg)At the very least, you need to use Twitter to promote your work. Each time you publish an article or someone writes you a favorable review, you should post that link. Some authors use twitter to share information related to their markets from others. Poetry writers may tweet links to other poets&rsquo; work. Non-fiction writers may tweet up-to-date news about the subject they write on. Fiction writers might post criticism for their genre. This establishes you as an expert or team player in your market.
+At the very least, you need to use Twitter to promote your work. Each time you publish an article or someone writes you a favorable review, you should post that link. Some authors use twitter to share information related to their markets from others. Poetry writers may tweet links to other poets&rsquo; work. Non-fiction writers may tweet up-to-date news about the subject they write on. Fiction writers might post criticism for their genre. This establishes you as an expert or team player in your market.
 
 Twitter is a valuable tool for networking with publishers, journalists, and other professional writers. Find them, follow them, and start conversations with them.
 
@@ -14,7 +14,7 @@ The most important thing is to pick a name that is identifiable and searchable. 
 
 ### Holding Twitter Conversations
 
-**[![Transmit Culture conversation](http://laurenhudgins.com/wp-content/uploads/2014/02/spencer-300x226.jpg)](http://laurenhudgins.com/wp-content/uploads/2014/02/spencer.jpg)@username**
+**@username**
 An **@** in a message links the following word as a twitter username. Usernames are always one word. This will notify a user that you are tweeting to them or about them. It shows up in their list of &ldquo;Interactions.&rdquo;
 
 The following tweets are all different.
@@ -36,7 +36,7 @@ Because hashtags break up the flow of sentences, I recommend always putting them
 
 \#Hashtags and @usernames are not affected by punctuation at the end of the word. You can use as many exclamation points as you want, but I don&rsquo;t recommend it.
 
-[![Ooligan students with computers](http://laurenhudgins.com/wp-content/uploads/2014/02/computers-200x300.jpg)](http://laurenhudgins.com/wp-content/uploads/2014/02/computers.jpg)**#FF or #FollowFriday**
+**#FF or #FollowFriday**
 (Not used as much in the past year, but still useful information.)
 
 On Friday list influential people on Twitter you follow.You often see something like this:
@@ -58,7 +58,7 @@ Example: RT @lehudgins Wow! The street is filled with marbles! Look out! http://
 -   Your name and picture is immediately associated with the information.
 -   Allows you to modify the message (MT) and add hashtags.
 
-[![Students in work room](http://laurenhudgins.com/wp-content/uploads/2014/02/work-room2-300x200.jpg)](http://laurenhudgins.com/wp-content/uploads/2014/02/work-room2.jpg)Example: DANGER ALERT! RT @lehudgins Wow! The street is filled with marbles! Look out! http://wtfpdx.com/marbles #caution
+Example: DANGER ALERT! RT @lehudgins Wow! The street is filled with marbles! Look out! http://wtfpdx.com/marbles #caution
 
 -   Difficult to track movement of information
 
@@ -74,7 +74,7 @@ For the *new version* of retweeting, the function is built in. Hover over the me
 
 A good policy is to retweet one person per day per feed using the old method. Like #FF, retweeting lets Twitter uses know that we&rsquo;re paying attention and appreciate what they&rsquo;re saying. If you&rsquo;re using Twitter to network, it&rsquo;s great flattery. Vary who you retweet. Share the love and avoid looking like a copybot.
 
-**[![student with laptop](http://laurenhudgins.com/wp-content/uploads/2014/02/after-exec-300x275.jpg)](http://laurenhudgins.com/wp-content/uploads/2014/02/after-exec.jpg)Via or h/t**
+**Via or h/t**
 
 It&rsquo;s polite to credit where you get information. Use &ldquo;via&rdquo; or &ldquo;h/t&rdquo; (meaning &ldquo;hat tip to) when you want to share what others have tweeted, but don&rsquo;t want to quote them. This is most often used with sharing links.
 
@@ -92,7 +92,7 @@ Be sure to monitor your mentions. At the top of your timeline, select the tab la
 
 Some messages you get will be marketing or promotional attempts (hey @lehudgins Lauren, check out my video of a fat and lazy dog!). These generally won&rsquo;t be interesting and could be spam, but use your discretion based on the source. There&rsquo;s a slim chance it might be something brilliant and useful.
 
-[![Mitchell reading](http://laurenhudgins.com/wp-content/uploads/2014/02/mitchell-200x300.jpg)](http://laurenhudgins.com/wp-content/uploads/2014/02/mitchell.jpg)**Direct Messages**
+**Direct Messages**
 
 Direct messages (DMs) are private. Only you and the person you are messaging can see them. You can only DM someone who follows you. Direct messages are considered more urgent than replies and mentions. There are few occasions when you would need to begin a conversation using a DM. Like mentions, if you get a DM from someone important in your industry or a question, you should answer. You can and will get spam in a DM. Someone has hacked the account of your contact.
 
