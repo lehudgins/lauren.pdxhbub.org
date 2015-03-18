@@ -26,4 +26,4 @@ C. Hope Clark is the founder of <a href="http://www.fundsforwriters.com/" target
 
 **Dana Lynn Smith**
 
-Hope Clark recommends the books of Dana Lynn Smith, [The Savvy Book Marketer](http://bookmarketingmaven.typepad.com/ "Marketing resource"). She wrote How To Get Your Book Reviewed. Smith offers a number of ebooks on self-marketing on her website. She frequently guest blogs her wisdom. Here is her guest post on Hope&rsquo;s blog &ldquo;[Learn to Think Like An Authorpreneur](http://hopeclark.blogspot.com/2011/10/learn-to-think-like-authorpreneur.html "Author Advice").&rdquo;
+Hope Clark recommends the books of Dana Lynn Smith, <a href="http://bookmarketingmaven.typepad.com/" target="_blank">The Savvy Book Marketer</a>. She wrote How To Get Your Book Reviewed. Smith offers a number of ebooks on self-marketing on her website. She frequently guest blogs her wisdom. Here is her guest post on Hope&rsquo;s blog &ldquo;<a href="http://hopeclark.blogspot.com/2011/10/learn-to-think-like-authorpreneur.html" target="_blank">Learn to Think Like An Authorpreneur</a>.&rdquo;
