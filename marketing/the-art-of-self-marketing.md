@@ -22,7 +22,7 @@ Here are two resources that can help you with self-promotion.
 
 **C. Hope Clark and Funds for Writers**
 
-C. Hope Clark is the founder of [Funds for Writers](http://www.fundsforwriters.com/ "Funds for Writers"), a website and newsletter full of advice and potential markets for writers. Her [blog](http://hopeclark.blogspot.com/ "Hope Clark Blog") frequently discusses successful methods of marketing for writers.
+C. Hope Clark is the founder of <a href="http://www.fundsforwriters.com/" target="_blank">Funds for Writers</a>, a website and newsletter full of advice and potential markets for writers. Her <a href="http://hopeclark.blogspot.com/" target="_blank">blog</a> frequently discusses successful methods of marketing for writers.
 
 **Dana Lynn Smith**
 
