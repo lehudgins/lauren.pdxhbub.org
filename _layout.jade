@@ -21,5 +21,6 @@ html(lang='en')
         if index(current.path.slice(0,1))['_data']
           nav.section
             mixin nav(current.path.slice(0,1))
+        h1= title(current.path)
       .content
         != yield
