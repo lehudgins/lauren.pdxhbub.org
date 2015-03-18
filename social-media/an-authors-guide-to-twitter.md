@@ -45,7 +45,7 @@ On Friday list influential people on Twitter you follow.You often see something 
 
 I find it most useful for readers to see only a few names and an explanation if possible.
 
-Example: For more inspiration, check out @lehudgins (local blogger) and @laura_hudson (Wired editor). #FF
+Example: For more inspiration, check out @lehudgins (local blogger) and @laura_hudson (Offworld editor). #FF
 
 A good policy is to tweet a #FF with two names every Friday. It&rsquo;s a great opportunity to let other users know that you&rsquo;re interested in what they say and quite a nice compliment.
 
