@@ -17,12 +17,57 @@
 @white: lighten(@pale, 8%);
 @black: darken(@green, 8%);
 
+// Styleguide
+
+
+.swatch {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.dusk {
+  background: @dusk;
+}
+.maroon {
+  background: @maroon;
+}
+.pale {
+  background: @pale;
+}
+.light-plum {
+  background: @light-plum;
+}
+.color4 {
+  background: @color4;
+}
+.color5 {
+  background: @color5;
+}
+.peach {
+  background: @peach;
+}
+.green {
+  background: @green;
+}
+.fuchia {
+  background: @fuchia;
+}
+.green {
+  background: @green;
+}
+.black {
+  background: @black;
+}
+
 .sans() {
   font-family: 'Quattrocento Sans', sans-serif;  
 }
 .serif() {
   font-family: "Quattrocento" serif;
 }
+
+// document
 
 body{
   .sans;
@@ -50,10 +95,11 @@ h2 {
   color: @brand-accent;
 }
 
-h3{
+h3 {
   color: @maroon;
 }
-h4{
+
+h4 {
   color: @green;
 }
 
@@ -100,4 +146,15 @@ input {
 
 .content {
   padding: 0 20px 0;
+}
+
+.media-grid {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.media-item {
+  // border: 1px dotted @black;
+  padding: 10px;
+  text-align: center;
 }
