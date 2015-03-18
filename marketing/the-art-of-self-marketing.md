@@ -2,8 +2,6 @@ I originally wrote this guide to self marketing for the authors published by <a 
 
 ### Website
 
-![Collaboration](http://laurenhudgins.com/wp-content/uploads/2014/02/collaboration-300x196.jpg)
-
 Without a website, you have no way to greet curious internet wanderers. Perhaps they heard an interview with you and want to know more. Unless you have a personal internet presence, your audience will have no way to look you up. They&rsquo;ll have to rely on what others have said about you. Your website should display what titles you have written, an &ldquo;About Me&rdquo; section for biographical information, and ordering information for your books. <a href="http://bookmarketingmaven.typepad.com/book_marketing_maven/2011/10/whats-the-most-important-thing-on-an-author-website.html" target="_blank">Here</a> and [here](http://janefriedman.com/2012/02/27/effective-author-website/ "effective author website") is some advice on the content of a useful author&rsquo;s website.
 
 Unless you have the budget to hire a fancy web designer, keep your website simple and easily navigable. You&rsquo;ll have to set up your domain name and hosting. It&rsquo;s acceptable to simply have a blog as a website.
