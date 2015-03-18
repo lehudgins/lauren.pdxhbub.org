@@ -1,1 +1,1 @@
-Local congregation supports Kenyan student The Frederick News-Post January 23, 2010
+<a href="http://www.fredericknewspost.com/archive/article_e8b4fff7-98c8-55ec-aab7-312f24f656dd.html" target="_blank">Local congregation supports Kenyan student</a>T*he Frederick News-Post* January 23, 2010
