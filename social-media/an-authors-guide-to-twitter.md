@@ -53,12 +53,12 @@ A good policy is to tweet a #FF with two names every Friday. It&rsquo;s a great 
 
 There are two ways to retweet. The *old way* involved the letters &ldquo;RT&rdquo; followed by the name of the person you were retweeting and the message.
 
-Example: RT @lehudgins Wow! The street is filled with marbles! Look out! http://wtfpdx.com/marbles
+Example: RT @lehudgins Wow! The street is filled with marbles! Look out! http<span></span>://wtfpdx.com/marbles
 
 -   Your name and picture is immediately associated with the information.
 -   Allows you to modify the message (MT) and add hashtags.
 
-Example: DANGER ALERT! RT @lehudgins Wow! The street is filled with marbles! Look out! http://wtfpdx.com/marbles #caution
+Example: DANGER ALERT! RT @lehudgins Wow! The street is filled with marbles! Look out! http<span></span>://wtfpdx.com/marbles #caution
 
 -   Difficult to track movement of information
 
@@ -78,7 +78,7 @@ A good policy is to retweet one person per day per feed using the old method. Li
 
 It&rsquo;s polite to credit where you get information. Use &ldquo;via&rdquo; or &ldquo;h/t&rdquo; (meaning &ldquo;hat tip to) when you want to share what others have tweeted, but don&rsquo;t want to quote them. This is most often used with sharing links.
 
-Example: Marbles are flooding Portland! http://wtfpdx.com/marbles (via @lehudgins)
+Example: Marbles are flooding Portland! http<span></span>://wtfpdx.com/marbles (via @lehudgins)
 
 #### Mentions and Replies
 
