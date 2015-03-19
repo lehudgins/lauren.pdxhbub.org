@@ -1,3 +1,4 @@
+//- pre does nothing?
 - function merge(a,b,pre){for (var f in b) { a[f] = b[f]}; return a}
 - function prefix(a,pre){
   - var r={};
@@ -16,6 +17,8 @@
   - };
   - return r;
 - }
+//- TASK: rework this to use a path
+//- can share code with meta?
 - function all_posts(b,pre){
   - var r=prefix(b._data,pre);
   - for(var s in subdirs(b)){
@@ -26,62 +29,63 @@
 - function href(path){
   - return '/' + normalize(path).join('/')
 - }
-- function index(path, section){
+//- break this in two?
+- function meta(path, section){
   - if (section === undefined) section = public;
   - if (path.length == 0) return section;
   - if (section[path[0]] == undefined) return false;
-  - return index(path.slice(1), section[path[0]]);
+  - return meta(path.slice(1), section[path[0]]);
 - }
 - function childs(path){
-  - var idx = index(path)['_data'];
+  - var idx = meta(path)['_data'];
   - var children = {}
   - for (var slug in idx) {
     - if (idx[slug].index !== false) {
       - children[slug] = idx[slug]
     - }
   - }
-  - return children;
-- }
+  - return children }
 
 - function post(path){
   - if (path.length > 1) path = normalize(path);
-  - var section = index(path.slice(0,-1))
-  - return section && section._data && section._data[slug(path)] || {}
-- }
-- function slug(path) {return path.slice(-1)[0] || ''};
-- function slugToTitle(slug) {
-  - return slug.replace(/-/g,' ').replace(/([^\W_]+[^\s-]*) */g,function(w){
-    - return w.charAt(0).toUpperCase() + w.substr(1);
-  - })
-- };
-- function title(path) {
-  - return post(path).title || slugToTitle(slug(normalize(path)))
-- };
-- function normalize(path) {
-  - return (path.slice(-1)[0] == 'index') ? path.slice(0, -1) : path;
-- }
-- function active(path) {
-  - // current.path starts with path
-  - return path.length <= current.path.length && href(current.path.slice(0, path.length)) == href(path);
-- }
+  - var section = meta(path.slice(0,-1))
+  - return section && section._data && section._data[slug(path)] || {} }
 
-mixin link(path, icon)
-  a(href=href(path) class="post-link"+(active(path)?" active":""))= title(path)
+- function slug(path) {return path.slice(-1)[0] || '' }
+
+- function slugToTitle(slug) { // helper for title()
+  - return slug.replace(/-/g,' ').replace(/([^\W_]+[^\s-]*) */g,function(w){
+    - return w.charAt(0).toUpperCase() + w.substr(1) 
+  - })}
+
+- function title(path) { // find a title for {path}
+  - return post(path).title || slugToTitle(slug(normalize(path))) }
+
+- function normalize(path) { // trim 'index' from end of {path} for meta() etc
+  - return (path.slice(-1)[0] == 'index') ? path.slice(0, -1) : path }
+
+- function active(path) { // is {path} an ancestor of {current.path}?
+  - return path.length <= current.path.length && href(current.path.slice(0, path.length)) == href(path) }
 
 - function excerpt(path, partialPrefix) {
-  - if (partialPrefix) {
-    - path.unshift(partialPrefix)
-  - }
-  - var content = partial(path.join('/')) || "";
-  - if(content.indexOf("<!-- more -->") == -1) return content;
-  - else return content.split("<!-- more -->")[0];
-- }
+  - if (partialPrefix) path.unshift(partialPrefix)
+  - var content = partial(path.join('/')) || ""
+  - if(content.indexOf("<!-- more -->") == -1) return content
+  - else return content.split("<!-- more -->")[0] }
 
 - var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 - function format_date(d){
   - var D = new Date(d);
   - return months[D.getMonth()]+' '+D.getDate()+', '+D.getFullYear()
 - }
+
+
+mixin link(path, icon)
+  a(href=href(path) title=title(path) class="post-link"+(active(path)?" active":""))
+    if block
+      block
+    else
+      = title(path)
 
 mixin date_label(d)
   if d
@@ -91,7 +95,7 @@ mixin date_label(d)
 mixin post_summary(path, partialPrefix)
   .post-summary
     mixin link(path)
-    mixin date_label(index(path).date)
+    mixin date_label(meta(path).date)
     div.excerpt!= excerpt(path, partialPrefix)
 
 mixin nav(path)
