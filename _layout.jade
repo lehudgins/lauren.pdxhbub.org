@@ -12,12 +12,13 @@ html(lang='en')
       //- include _includes/debug
       header
         nav.primary
-          .search
-            form(action='http://google.com/cse' )
-              input(type='hidden', name='cx', value='012963123305395825585:f_lcpjzw7ke')
-              input(type='hidden', name='ie', value='UTF-8')
-              input(type='text', name='q' placeholder="search")
-          mixin nav([])
+          .brand Lauren Hudgins
+          //- .search
+          //-   form(action='http://google.com/cse' )
+          //-     input(type='hidden', name='cx', value='012963123305395825585:f_lcpjzw7ke')
+          //-     input(type='hidden', name='ie', value='UTF-8')
+          //-     input(type='text', name='q' placeholder="search")
+          +nav([])
           a(href="https://twitter.com/lehudgins" title="Lauren Hudgins on Twitter"): i.fa.fa-twitter
           a(href="https://www.pinterest.com/lehudgins/" title="Lauren Hudgins on Pinterest"): i.fa.fa-pinterest
           a(href="https://plus.google.com/u/0/+LaurenHudgins/posts" title="Lauren Hudgins on Google+"): i.fa.fa-google-plus
