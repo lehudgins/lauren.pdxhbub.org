@@ -1,6 +1,5 @@
-This is Lauren Hudgins' website.
+Lauren's website, [next.laurenhudgins.com](http://next.laurenhudgins.com).
 
- - http://next.laurenhudgins.com.
- - [Edit posts in Prose.io](http://prose.io/#prism-house/laurenhudgins.com).
- - [/styleguide](/styleguide)
+ - You can make/suggest edits [with Prose.io](http://prose.io/#prism-house/laurenhudgins.com).
+ - [Styleguide](/styleguide)
  - Browse code: https://github.com/prism-house/laurenhudgins.com.
