@@ -23,11 +23,12 @@ html(lang='en')
           a(href="https://www.pinterest.com/lehudgins/" title="Lauren Hudgins on Pinterest"): i.fa.fa-pinterest
           a(href="https://plus.google.com/u/0/+LaurenHudgins/posts" title="Lauren Hudgins on Google+"): i.fa.fa-google-plus
           a(href="https://instagram.com/laurenhudgins/" title="Lauren Hudgins on Instagram"): i.fa.fa-instagram
-          a(href="/README"): i.fa.fa-file
+          +link(['README'])
+            i.fa.fa-file-text
         block section-nav
           if childs(current.path.slice(0,1))
             nav.section
-              mixin nav(current.path.slice(0,1))
+              +nav(current.path.slice(0,1))
         h1= title(current.path)
       .content
         block content
