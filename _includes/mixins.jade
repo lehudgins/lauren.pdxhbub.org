@@ -1,5 +1,4 @@
-//- pre does nothing?
-- function merge(a,b,pre){for (var f in b) { a[f] = b[f]}; return a}
+- function merge(a,b){for (var f in b) { a[f] = b[f]}; return a}
 - function prefix(a,pre){
   - var r={};
   - for (var f in a) {
@@ -15,7 +14,6 @@
     - if (i !== '_data' && i !== '_contents') r[i]=b[i] }
   - return r }
 
-//- TASK: rework this to use a path
 - function all_posts(b,pre){
   - var r=prefix(b._data,pre);
   - for(var s in subdirs(b)){
@@ -43,11 +41,11 @@
   - return children }
 
 - function post(path){
-  - if (path.length > 1) path = normalize(path);
   - var section = subtree(path.slice(0,-1))
   - return section && section._data && section._data[slug(path)] || {} }
 
 - function normalize(path) { // trim 'index' from end of {path} for meta() etc
+  - if (path.length == 1) return path // can't go up from the top
   - return (path.slice(-1)[0] == 'index') ? path.slice(0, -1) : path }
 
 - function slug(path) {return path.slice(-1)[0] || '' }
@@ -78,7 +76,7 @@
   - return months[D.getMonth()]+' '+D.getDate()+', '+D.getFullYear() }
 
 
-mixin link(path, icon)
+mixin link(path)
   a(href=href(path) title=title(path) class="post-link"+(active(path)?" active":""))
     if block
       block
