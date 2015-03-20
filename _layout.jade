@@ -26,7 +26,7 @@ html(lang='en')
           +link(['README'])
             i.fa.fa-file-text
         block section-nav
-          if childs(current.path.slice(0,1))
+          if children_of(current.path.slice(0,1))
             nav.section
               +nav(current.path.slice(0,1))
         h1= title(current.path)

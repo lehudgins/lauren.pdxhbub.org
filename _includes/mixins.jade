@@ -5,39 +5,33 @@
   - for (var f in a) {
     - if (a[f]['index'] === false) continue;
     - if (f == 'index') {
-      - r[pre] = a[f];
-    - } else r[pre+f] = a[f];
-  - }
-  - return r
-- }
+      - r[pre] = a[f] } 
+    - else r[pre+f] = a[f]; }
+  - return r }
+
 - function subdirs(b){
   - var r={};
   - for (var i in b) {
-    - if (i !== '_data' && i !== '_contents') r[i]=b[i];
-  - };
-  - return r;
-- }
+    - if (i !== '_data' && i !== '_contents') r[i]=b[i] }
+  - return r }
+
 //- TASK: rework this to use a path
-//- can share code with meta?
 - function all_posts(b,pre){
   - var r=prefix(b._data,pre);
   - for(var s in subdirs(b)){
-    - merge(r, all_posts(b[s],pre+s+'/'));
-  - };
-  - return r;
-- }
+    - merge(r, all_posts(b[s],pre+s+'/')) }
+  - return r }
+
 - function href(path){
-  - return '/' + normalize(path).join('/')
-- }
-//- break this in two?
-- function subtree(path, section){
+  - return '/' + normalize(path).join('/') }
+
+- function subtree(path, section) {
   - if (section === undefined) section = public;
   - if (path.length == 0) return section;
   - if (section[path[0]] == undefined) return false;
-  - return subtree(path.slice(1), section[path[0]]);
-- }
-//- return object of children, or false
-- function childs(path){
+  - return subtree(path.slice(1), section[path[0]]) }
+
+- function children_of(path){
   - var idx = subtree(path);
   - var children = false
   - if (idx) {
@@ -60,7 +54,7 @@
 
 - function slugToTitle(slug) { // helper for title()
   - return slug.replace(/-/g,' ').replace(/([^\W_]+[^\s-]*) */g,function(w){
-    - return w.charAt(0).toUpperCase() + w.substr(1) 
+    - return w.charAt(0).toUpperCase() + w.substr(1)
   - })}
 
 - function title(path) { // find a title for {path}
@@ -69,17 +63,19 @@
 - function active(path) { // is {path} an ancestor of {current.path}?
   - return path.length <= current.path.length && href(current.path.slice(0, path.length)) == href(path) }
 
-- function excerpt(path, partialPrefix) {
-  - if (partialPrefix) path.unshift(partialPrefix)
-  - var content = partial(path.join('/')) || ""
+- function pathToRoot(path) { // the relative path from path to root
+  - var numLevelsUp = path.length - 1;
+  - return Array(numLevelsUp + 1).join("../");
+- }
+- function excerpt(path) {
+  - var content = partial(pathToRoot(current.path) + path.join('/')) || ""
   - if(content.indexOf("<!-- more -->") == -1) return content
   - else return content.split("<!-- more -->")[0] }
 
 - var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 - function format_date(d){
-  - var D = new Date(d);
-  - return months[D.getMonth()]+' '+D.getDate()+', '+D.getFullYear()
-- }
+  - var D = new Date(d)
+  - return months[D.getMonth()]+' '+D.getDate()+', '+D.getFullYear() }
 
 
 mixin link(path, icon)
@@ -94,14 +90,14 @@ mixin date_label(d)
     div.date(data-raw=d)= format_date(d)
     | 
 
-mixin post_summary(path, partialPrefix)
+mixin post_summary(path)
   .post-summary
     mixin link(path)
     mixin date_label(subtree(path).date)
-    div.excerpt!= excerpt(path, partialPrefix)
+    div.excerpt!= excerpt(path)
 
 mixin nav(path)
-  - var children = childs(path)
+  - var children = children_of(path)
   each post,slug in children
     mixin link(path.concat(slug))
   
