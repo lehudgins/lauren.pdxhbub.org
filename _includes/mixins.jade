@@ -30,26 +30,31 @@
   - return '/' + normalize(path).join('/')
 - }
 //- break this in two?
-- function meta(path, section){
+- function subtree(path, section){
   - if (section === undefined) section = public;
   - if (path.length == 0) return section;
   - if (section[path[0]] == undefined) return false;
-  - return meta(path.slice(1), section[path[0]]);
+  - return subtree(path.slice(1), section[path[0]]);
 - }
+//- return object of children, or false
 - function childs(path){
-  - var idx = meta(path)['_data'];
-  - var children = {}
-  - for (var slug in idx) {
-    - if (idx[slug].index !== false) {
-      - children[slug] = idx[slug]
-    - }
-  - }
+  - var idx = subtree(path);
+  - var children = false
+  - if (idx) {
+    - all_children = idx['_data']
+    - for (var slug in all_children) {
+      - if (all_children[slug].index !== false) {
+        - children = children || {}
+        - children[slug] = idx[slug] }}}
   - return children }
 
 - function post(path){
   - if (path.length > 1) path = normalize(path);
-  - var section = meta(path.slice(0,-1))
+  - var section = subtree(path.slice(0,-1))
   - return section && section._data && section._data[slug(path)] || {} }
+
+- function normalize(path) { // trim 'index' from end of {path} for meta() etc
+  - return (path.slice(-1)[0] == 'index') ? path.slice(0, -1) : path }
 
 - function slug(path) {return path.slice(-1)[0] || '' }
 
@@ -60,9 +65,6 @@
 
 - function title(path) { // find a title for {path}
   - return post(path).title || slugToTitle(slug(normalize(path))) }
-
-- function normalize(path) { // trim 'index' from end of {path} for meta() etc
-  - return (path.slice(-1)[0] == 'index') ? path.slice(0, -1) : path }
 
 - function active(path) { // is {path} an ancestor of {current.path}?
   - return path.length <= current.path.length && href(current.path.slice(0, path.length)) == href(path) }
@@ -95,7 +97,7 @@ mixin date_label(d)
 mixin post_summary(path, partialPrefix)
   .post-summary
     mixin link(path)
-    mixin date_label(meta(path).date)
+    mixin date_label(subtree(path).date)
     div.excerpt!= excerpt(path, partialPrefix)
 
 mixin nav(path)

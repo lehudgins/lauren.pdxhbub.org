@@ -24,7 +24,7 @@ html(lang='en')
           a(href="https://instagram.com/laurenhudgins/" title="Lauren Hudgins on Instagram"): i.fa.fa-instagram
           a(href="/README"): i.fa.fa-file
         block section-nav
-          if index(current.path.slice(0,1))['_data']
+          if childs(current.path.slice(0,1))
             nav.section
               mixin nav(current.path.slice(0,1))
         h1= title(current.path)
