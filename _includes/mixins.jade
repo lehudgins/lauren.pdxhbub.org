@@ -23,11 +23,12 @@
 - function href(path){
   - return '/' + normalize(path).join('/') }
 
-- function subtree(path, section) {
-  - if (section === undefined) section = public;
-  - if (path.length == 0) return section;
-  - if (section[path[0]] == undefined) return false;
-  - return subtree(path.slice(1), section[path[0]]) }
+- function subtree(path) {
+  - var section = public;
+  - while (path.length > 0) {
+    - section = section[path.shift()]
+    - if (!section) return false }
+  - return section }
 
 - function children_of(path){
   - var idx = subtree(path);
