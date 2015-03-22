@@ -11,15 +11,16 @@
 @fuchia: #B9006E;
 @green: #0D7D86;
 
-@brand-primary: @light-plum;
-@brand-accent: @fuchia;
-/* @brand-primary: @green; */
 @white: lighten(@pale, 8%);
 @black: darken(@green, 8%);
 
+// Color assignments
+@brand-primary: @light-plum;
+@brand-accent: @fuchia;
+
+@frame: 1px solid @green;
+
 // Styleguide
-
-
 .swatch {
   width: 100px;
   height: 100px;
@@ -91,7 +92,7 @@ h1, h2, h3, h4, h5 {
 h1{
   color: @dusk;
   font-weight: normal;
-  border-bottom: 2px solid @peach;
+  border-bottom: @frame;
   text-align: center;
   font-size: 65px;
   line-height: 1.2em;
@@ -112,6 +113,7 @@ h4 {
 
 a.active {
   background: @pale;
+  // color: @peach;
 }
 
 .wrapper.primary-nav {
@@ -125,17 +127,17 @@ nav {
   margin-bottom: 10px;
   // line-height: 1.2em;
   // .serif;
-  border-bottom: 1px solid @peach;
+  border-bottom: @frame;
   font-size: 1.5em;
   &.section {
     font-size: 1.2em;
     
   }
-  > a {
+  > * {
     padding: 10px;
     text-decoration: none;
   }
-  .search {
+  > .search {
     padding: 5px;
     input {
       padding: 5px;

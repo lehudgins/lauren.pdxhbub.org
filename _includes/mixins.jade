@@ -1,3 +1,15 @@
+//- - function memoize = function(){
+//-     var self = this, cache = {};
+//-     return function( arg ){
+//-       if(arg in cache) {
+//-         console.log('Cache hit for '+arg);
+//-         return cache[arg];
+//-       } else {
+//-         console.log('Cache miss for '+arg);
+//-         return cache[arg] = self( arg );
+//-       }
+//-     }
+//-   }
 - function merge(a,b){for (var f in b) { a[f] = b[f]}; return a}
 - function prefix(a,pre){
   - var r={};
@@ -21,7 +33,10 @@
   - return r }
 
 - function href(path){
-  - return '/' + normalize(path).join('/') }
+  - return '/' + logicalPath(path).join('/') }
+
+- function pathForHref(href){
+  - return href.split('/').slice(1) }
 
 - function subtree(path) {
   - var section = public;
@@ -41,11 +56,13 @@
         - children[slug] = idx[slug] }}}
   - return children }
 
-- function post(path){
+- function getPost(path){
   - var section = subtree(path.slice(0,-1))
-  - return section && section._data && section._data[slug(path)] || {} }
+  - var post = section && section._data && section._data[slug(path)] || {}
+  - post.path = path
+  - return post }
 
-- function normalize(path) { // trim 'index' from end of {path} for meta() etc
+- function logicalPath(path) {
   - if (path.length == 1) return path // can't go up from the top
   - return (path.slice(-1)[0] == 'index') ? path.slice(0, -1) : path }
 
@@ -57,16 +74,14 @@
   - })}
 
 - function title(path) { // find a title for {path}
-  - return post(path).title || slugToTitle(slug(normalize(path))) }
+  - return getPost(path).title || slugToTitle(slug(logicalPath(path))) }
 
 - function active(path) { // is {path} an ancestor of {current.path}?
   - return path.length <= current.path.length && href(current.path.slice(0, path.length)) == href(path) }
 
-- function pathToRoot(path) { // the relative path from path to root
-  - var numLevelsUp = path.length - 1;
-  - return Array(numLevelsUp + 1).join("../");
-- }
 - function excerpt(path) {
+  - var depth = current.path.length
+  - var pathToRoot = Array(depth).join("../");
   - var content = partial(pathToRoot(current.path) + path.join('/')) || ""
   - if(content.indexOf("<!-- more -->") == -1) return content
   - else return content.split("<!-- more -->")[0] }
@@ -76,6 +91,9 @@
   - var D = new Date(d)
   - return months[D.getMonth()]+' '+D.getDate()+', '+D.getFullYear() }
 
+- function editUrl(path) {
+  - var base = "http://prose.io/#prism-house/laurenhudgins.com/edit/master/"
+  - return base + path.join('/') + '.md' }
 
 mixin link(path)
   a(href=href(path) title=title(path) class="post-link"+(active(path)?" active":""))
