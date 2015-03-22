@@ -73,8 +73,8 @@
     - return w.charAt(0).toUpperCase() + w.substr(1)
   - })}
 
-- function title(path) { // find a title for {path}
-  - return getPost(path).title || slugToTitle(slug(logicalPath(path))) }
+- function title(post) { // find a title for {path}
+  - return post.title || slugToTitle(slug(logicalPath(post.path))) }
 
 - function active(path) { // is {path} an ancestor of {current.path}?
   - return path.length <= current.path.length && href(current.path.slice(0, path.length)) == href(path) }
@@ -96,11 +96,11 @@
   - return base + path.join('/') + '.md' }
 
 mixin link(path)
-  a(href=href(path) title=title(path) class="post-link"+(active(path)?" active":""))
+  a(href=href(path) title=title(getPost(path)) class="post-link"+(active(path)?" active":""))
     if block
       block
     else
-      = title(path)
+      = title(getPost(path))
 
 mixin date_label(d)
   if d

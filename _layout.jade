@@ -2,7 +2,7 @@ doctype html
 include _includes/mixins
 html(lang='en')
   head
-    title= title(current.path)
+    title= title(getPost(current.path))
     link(rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css")
     link(rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css")
     link(href='//fonts.googleapis.com/css?family=Quattrocento+Sans:400,400italic,700,700italic|Quattrocento:400,700' rel='stylesheet' type='text/css')
@@ -29,7 +29,7 @@ html(lang='en')
           if children_of(current.path.slice(0,1))
             nav.section
               +nav(current.path.slice(0,1))
-        h1= title(current.path)
+        h1= title(getPost(current.path))
       .content
         block content
           != yield
