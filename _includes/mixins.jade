@@ -10,37 +10,16 @@
 //-       }
 //-     }
 //-   }
-- function merge(a,b){for (var f in b) { a[f] = b[f]}; return a}
 
-- function allPosts(section,prefix){
-  - var r={};
-  - for (var slug in section._data) {
-    - if (section._data[slug]['index'] === false) continue;
-    - if (slug == 'index') {
-      - r[prefix] = section._data[slug] } 
-    - else r[prefix+slug] = section._data[slug] }
+- function allPosts(path, section){
+  - var r=childrenOf(path, section);
   - for(var key in section){
     - if (key !== '_data' && key !== '_contents') {
-      - merge(r, allPosts(section[key],prefix+key+'/')) }}
+      - r=r.concat(allPosts(path.concat(key), section[key])) }}
   - return r }
-
-  - function allPostsArray(section,path){
-    - var r=[];
-    - for (var slug in section._data) {
-      - if (section._data[slug]['index'] === false) continue;
-      - if (slug == 'index') {
-        - r[path] = section._data[slug] } 
-      - else r[path+slug] = section._data[slug] }
-    - for(var key in section){
-      - if (key !== '_data' && key !== '_contents') {
-        - merge(r, allPosts(section[key],path+key+'/')) }}
-    - return r }
 
 - function href(path){
   - return '/' + logicalPath(path).join('/') }
-
-- function pathForHref(href){
-  - return href.split('/').slice(1) }
 
 - function subtree(path) {
   - var section = public;
@@ -56,7 +35,7 @@
     - var allChildren = section['_data']
     - for (var slug in allChildren) {
       - if (allChildren[slug].index !== false) {
-        - allChildren[slug]['path'] = path.concat(slug)
+        - allChildren[slug].path = path.concat(slug)
         - children.push(allChildren[slug]) }}}
   - return children }
 
@@ -98,6 +77,9 @@
 - function editUrl(path) {
   - var base = "http://prose.io/#prism-house/laurenhudgins.com/edit/master/"
   - return base + path.join('/') + '.md' }
+
+mixin printVal(val)
+  pre= JSON.stringify(val, null, 2)
 
 mixin link(post)
   a(href=href(post.path) title=title(post) class="post-link"+(active(post.path)?" active":""))

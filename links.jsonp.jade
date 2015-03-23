@@ -1,12 +1,12 @@
 include _includes/mixins
-- var posts = allPosts(public, '/');
-- var remaining = Object.keys(posts).length;
+- var posts = allPosts([], public);
+- var remaining = posts.length;
 | callback([
-each val, key in posts
+each post in posts
   - remaining--;
   | {
-  |   "text": "#{val.title || key}",
-  |   "href": "#{key}"
+  |   "text": "#{title(post)}",
+  |   "href": "#{href(post.path)}"
   if remaining > 0
     | },
   else
