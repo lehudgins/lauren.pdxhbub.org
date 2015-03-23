@@ -1,0 +1,27 @@
+include ../_includes/mixins
+.readme
+  != partial("../README") || ""
+table.posts
+  thead
+    tr
+      td title
+      //- td status
+      td description?
+  tbody
+    each post, href in allPosts(public, '/')
+      tr
+        td= post.title
+          a(href=editUrl(pathForHref(href))) edit
+
+        //- td published
+        td
+          a(href=pathForHref(href).slice(0,-1).concat('_data.json'))= post.description? "Yes" : "No"
+  //-   - remaining--;
+  //-   | {
+  //-   |   "text": "#{val.title || key}",
+  //-   |   "href": "#{key}"
+  //-   if remaining > 0
+  //-     | },
+  //-   else
+  //-     | }
+  //- |])

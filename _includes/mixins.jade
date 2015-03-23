@@ -11,25 +11,18 @@
 //-     }
 //-   }
 - function merge(a,b){for (var f in b) { a[f] = b[f]}; return a}
-- function prefix(a,pre){
-  - var r={};
-  - for (var f in a) {
-    - if (a[f]['index'] === false) continue;
-    - if (f == 'index') {
-      - r[pre] = a[f] } 
-    - else r[pre+f] = a[f]; }
-  - return r }
 
-- function subdirs(b){
+- function allPosts(section,prefix){
+  //- - function prefix(a,pre){
   - var r={};
-  - for (var i in b) {
-    - if (i !== '_data' && i !== '_contents') r[i]=b[i] }
-  - return r }
-
-- function all_posts(b,pre){
-  - var r=prefix(b._data,pre);
-  - for(var s in subdirs(b)){
-    - merge(r, all_posts(b[s],pre+s+'/')) }
+  - for (var slug in section._data) {
+    - if (section._data[slug]['index'] === false) continue;
+    - if (slug == 'index') {
+      - r[prefix] = section._data[slug] } 
+    - else r[prefix+slug] = section._data[slug] }
+  - for(var key in section){
+    - if (key !== '_data' && key !== '_contents') {
+      - merge(r, allPosts(section[key],prefix+key+'/')) }}
   - return r }
 
 - function href(path){
@@ -39,9 +32,10 @@
   - return href.split('/').slice(1) }
 
 - function subtree(path) {
+  - 
   - var section = public;
-  - while (path.length > 0) {
-    - section = section[path.shift()]
+  - for (var i = 0; i < path.length; i++) {
+    - section = section[path[i]]
     - if (!section) return false }
   - return section }
 
@@ -66,7 +60,7 @@
   - if (path.length == 1) return path // can't go up from the top
   - return (path.slice(-1)[0] == 'index') ? path.slice(0, -1) : path }
 
-- function slug(path) {return path.slice(-1)[0] || '' }
+- function slug(path) {return logicalPath(path).slice(-1)[0] || '' }
 
 - function slugToTitle(slug) { // helper for title()
   - return slug.replace(/-/g,' ').replace(/([^\W_]+[^\s-]*) */g,function(w){
@@ -74,7 +68,7 @@
   - })}
 
 - function title(post) { // find a title for {path}
-  - return post.title || slugToTitle(slug(logicalPath(post.path))) }
+  - return post.title || slugToTitle(slug(post.path)) }
 
 - function active(path) { // is {path} an ancestor of {current.path}?
   - return path.length <= current.path.length && href(current.path.slice(0, path.length)) == href(path) }
@@ -117,4 +111,3 @@ mixin nav(path)
   - var children = children_of(path)
   each post,slug in children
     mixin link(path.concat(slug))
-  

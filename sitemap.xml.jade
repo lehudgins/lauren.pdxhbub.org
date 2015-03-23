@@ -1,6 +1,6 @@
 doctype xml
 include _includes/mixins
 urlset(xmlns='http://www.sitemaps.org/schemas/sitemap/0.9')
-  each val, key in all_posts(public, '/')
+  each val, key in allPosts(public, '/')
     url
       loc #{site.url}#{key}
