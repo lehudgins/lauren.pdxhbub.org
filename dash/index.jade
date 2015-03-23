@@ -12,16 +12,5 @@ table.posts
       tr
         td= title(post)
           a(href=editUrl(post.path)) edit
-
-        //- td published
         td
           a(href=post.path.slice(0,-1).concat('_data.json'))= post.description? "Yes" : "No"
-  //-   - remaining--;
-  //-   | {
-  //-   |   "text": "#{val.title || key}",
-  //-   |   "href": "#{key}"
-  //-   if remaining > 0
-  //-     | },
-  //-   else
-  //-     | }
-  //- |])

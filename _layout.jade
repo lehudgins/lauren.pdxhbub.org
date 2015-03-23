@@ -1,8 +1,9 @@
 doctype html
 include _includes/mixins
+- var currentPost = getCurrentPost()
 html(lang='en')
   head
-    title= title(getPost(current.path))
+    title= title(currentPost)
     link(rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css")
     link(rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css")
     link(href='//fonts.googleapis.com/css?family=Quattrocento+Sans:400,400italic,700,700italic|Quattrocento:400,700' rel='stylesheet' type='text/css')
@@ -26,10 +27,10 @@ html(lang='en')
           +link(getPost(['README']))
             i.fa.fa-file-text
         block section-nav
-          if childrenOf(current.path.slice(0,1)).length > 0
+          if childrenOf(currentPost.path.slice(0,1)).length > 0
             nav.section
-              +nav(current.path.slice(0,1))
-        h1= title(getPost(current.path))
+              +nav(currentPost.path.slice(0,1))
+        h1= title(currentPost)
       .content
         block content
           != yield

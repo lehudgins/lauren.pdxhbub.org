@@ -19,7 +19,7 @@
   - return r }
 
 - function href(path){
-  - return '/' + logicalPath(path).join('/') }
+  - return '/' + path.join('/') }
 
 - function subtree(path) {
   - var section = public;
@@ -45,11 +45,20 @@
   - post.path = path
   - return post }
 
-- function logicalPath(path) {
-  - if (path.length == 1) return path // can't go up from the top
-  - return (path.slice(-1)[0] == 'index') ? path.slice(0, -1) : path }
+- function getCurrentPost(){
+  //- path          strip URL  strip metadata path  
+  //- ['index']           yes                   no
+  //- [...,'index']       yes                  yes
+  //- [...,'foo']          no                   no
+  - var urlPath = current.path
+  - if (urlPath[urlPath.length-1] == 'index') {
+    - urlPath = urlPath.slice(0,-1) }
+  - var metaDataPath = (current.path.length === 1) ? current.path : urlPath
+  - var post = getPost(metaDataPath)
+  - post.path = urlPath
+  - return post }
 
-- function slug(path) {return logicalPath(path).slice(-1)[0] || '' }
+- function slug(path) {return path[path.length-1] || '' }
 
 - function slugToTitle(slug) { // helper for title()
   - return slug.replace(/-/g,' ').replace(/([^\W_]+[^\s-]*) */g,function(w){
@@ -59,11 +68,12 @@
 - function title(post) { // find a title for {path}
   - return post.title || slugToTitle(slug(post.path)) }
 
-- function active(path) { // is {path} an ancestor of {current.path}?
-  - return path.length <= current.path.length && href(current.path.slice(0, path.length)) == href(path) }
+- function active(path) { // is {path} an ancestor of {currentPost().path}?
+  - var currentPath = getCurrentPost().path
+  - return path.length <= currentPath.length && href(currentPath.slice(0, path.length)) == href(path) }
 
 - function excerpt(path) {
-  - var depth = current.path.length
+  - var depth = currentPost().path.length
   - var pathToRoot = Array(depth).join("../");
   - var content = partial(pathToRoot + path.join('/')) || ""
   - if(content.indexOf("<!-- more -->") == -1) return content

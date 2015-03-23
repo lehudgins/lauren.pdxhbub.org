@@ -1,3 +1,5 @@
+include mixins
+
 script.
   var showDebug = function(){
     document.getElementById('debug').style.display = 'block';
@@ -9,3 +11,16 @@ a(href="#", onclick="showDebug()") open debug panel
   pre= JSON.stringify(locals, null, 2)
   h4 current
   pre= JSON.stringify(current, null, 2)
+  - post = getCurrentPost()
+  h4 slug
+  +printVal(slug(post.path))
+  h4 subtree
+  +printVal(subtree(post.path))
+  h4 post
+  +printVal(post)
+  h4 active
+  +printVal(active(post.path))
+  h4 title
+  +printVal(title(post))
+  h4 link
+  +link(post)
