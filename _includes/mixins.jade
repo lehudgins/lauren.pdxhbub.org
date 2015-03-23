@@ -13,7 +13,6 @@
 - function merge(a,b){for (var f in b) { a[f] = b[f]}; return a}
 
 - function allPosts(section,prefix){
-  //- - function prefix(a,pre){
   - var r={};
   - for (var slug in section._data) {
     - if (section._data[slug]['index'] === false) continue;
@@ -25,6 +24,18 @@
       - merge(r, allPosts(section[key],prefix+key+'/')) }}
   - return r }
 
+  - function allPostsArray(section,path){
+    - var r=[];
+    - for (var slug in section._data) {
+      - if (section._data[slug]['index'] === false) continue;
+      - if (slug == 'index') {
+        - r[path] = section._data[slug] } 
+      - else r[path+slug] = section._data[slug] }
+    - for(var key in section){
+      - if (key !== '_data' && key !== '_contents') {
+        - merge(r, allPosts(section[key],path+key+'/')) }}
+    - return r }
+
 - function href(path){
   - return '/' + logicalPath(path).join('/') }
 
@@ -32,22 +43,21 @@
   - return href.split('/').slice(1) }
 
 - function subtree(path) {
-  - 
   - var section = public;
   - for (var i = 0; i < path.length; i++) {
     - section = section[path[i]]
     - if (!section) return false }
   - return section }
 
-- function children_of(path){
-  - var idx = subtree(path);
-  - var children = false
-  - if (idx) {
-    - all_children = idx['_data']
-    - for (var slug in all_children) {
-      - if (all_children[slug].index !== false) {
-        - children = children || {}
-        - children[slug] = idx[slug] }}}
+- function childrenOf(path, section){
+  - section = section || subtree(path)
+  - var children = []
+  - if (section) {
+    - var allChildren = section['_data']
+    - for (var slug in allChildren) {
+      - if (allChildren[slug].index !== false) {
+        - allChildren[slug]['path'] = path.concat(slug)
+        - children.push(allChildren[slug]) }}}
   - return children }
 
 - function getPost(path){
@@ -76,7 +86,7 @@
 - function excerpt(path) {
   - var depth = current.path.length
   - var pathToRoot = Array(depth).join("../");
-  - var content = partial(pathToRoot(current.path) + path.join('/')) || ""
+  - var content = partial(pathToRoot + path.join('/')) || ""
   - if(content.indexOf("<!-- more -->") == -1) return content
   - else return content.split("<!-- more -->")[0] }
 
@@ -89,25 +99,24 @@
   - var base = "http://prose.io/#prism-house/laurenhudgins.com/edit/master/"
   - return base + path.join('/') + '.md' }
 
-mixin link(path)
-  a(href=href(path) title=title(getPost(path)) class="post-link"+(active(path)?" active":""))
+mixin link(post)
+  a(href=href(post.path) title=title(post) class="post-link"+(active(post.path)?" active":""))
     if block
       block
     else
-      = title(getPost(path))
+      = title(post)
 
-mixin date_label(d)
-  if d
-    div.date(data-raw=d)= format_date(d)
+mixin date_label(date)
+  if date
+    div.date(data-raw=date)= format_date(date)
     | 
 
-mixin post_summary(path)
+mixin post_summary(post)
   .post-summary
-    mixin link(path)
-    mixin date_label(subtree(path).date)
-    div.excerpt!= excerpt(path)
+    mixin link(post)
+    mixin date_label(post.date)
+    div.excerpt!= excerpt(post.path)
 
 mixin nav(path)
-  - var children = children_of(path)
-  each post,slug in children
-    mixin link(path.concat(slug))
+  each post in childrenOf(path)
+    mixin link(post)

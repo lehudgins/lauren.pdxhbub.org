@@ -1,5 +1,5 @@
 include ../_includes/mixins
 
 .posts.recent-posts
-  for post, slug in children_of(["blog"])
-    mixin post_summary(["blog", slug])
+  for post in childrenOf(["blog"])
+    mixin post_summary(post)
