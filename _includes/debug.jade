@@ -1,5 +1,8 @@
 include mixins
 
+mixin printVal(val)
+  pre= JSON.stringify(val, null, 2)
+
 script.
   var showDebug = function(){
     document.getElementById('debug').style.display = 'block';
@@ -24,3 +27,5 @@ a(href="#", onclick="showDebug()") open debug panel
   +printVal(title(post))
   h4 link
   +link(post)
+  h4 editURL
+  +printVal(editURL(post.path))

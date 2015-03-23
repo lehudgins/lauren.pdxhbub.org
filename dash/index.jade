@@ -6,11 +6,14 @@ table.posts
     tr
       td title
       //- td status
-      td description?
+      td description
+      td edit
   tbody
     each post in allPosts([], public)
       tr
-        td= title(post)
-          a(href=editUrl(post.path)) edit
         td
-          a(href=post.path.slice(0,-1).concat('_data.json'))= post.description? "Yes" : "No"
+          = title(post)
+        td
+          a(href=metadataEditURL(post.path))= post.description? "Yes" : "No"
+        td
+          a(href=editURL(post.path)): i.fa.fa-edit

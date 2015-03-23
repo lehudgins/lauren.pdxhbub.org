@@ -84,12 +84,23 @@
   - var D = new Date(d)
   - return months[D.getMonth()]+' '+D.getDate()+', '+D.getFullYear() }
 
-- function editUrl(path) {
-  - var base = "http://prose.io/#prism-house/laurenhudgins.com/edit/master/"
-  - return base + path.join('/') + '.md' }
+- function sectionHasFile(section, file) { 
+  - return section && section._contents && (section._contents.indexOf(file) !== -1) }
 
-mixin printVal(val)
-  pre= JSON.stringify(val, null, 2)
+- function sourcePath(path) {
+  - var section = subtree(path.slice(0,-1))
+  - if (sectionHasFile(section, slug(path)+'.html')) {
+    - return path
+  - } else if (sectionHasFile(section[slug(path)], 'index.html')) {
+    - return path.concat('index')
+  - }
+- }
+
+- function editURL(path) {
+  - return editBaseURL + sourcePath(path).join('/') + '.md' }
+
+- function metadataEditURL(path) {
+  - return editBaseURL + path.slice(0,-1).concat('_data.json').join('/') }
 
 mixin link(post)
   a(href=href(post.path) title=title(post) class="post-link"+(active(post.path)?" active":""))
