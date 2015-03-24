@@ -2,4 +2,4 @@
 * of
 * things
 
-![ErnstStavroBlofeld.jpg](/blog/ErnstStavroBlofeld.jpg)
+![ErnstStavroBlofeld.jpg](/media/ErnstStavroBlofeld.jpg)
