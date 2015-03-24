@@ -11,6 +11,5 @@ prose:
     - _prose.yml
     - media
     - links.jsonp.jade
-    - google281b380f7dbceb01.html
     - Makefile
     - sitemap.xml.jade
