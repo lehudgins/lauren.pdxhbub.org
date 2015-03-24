@@ -79,6 +79,8 @@
   - if(content.indexOf("<!-- more -->") == -1) return content
   - else return content.split("<!-- more -->")[0] }
 
+- function summary(post) { return post.summary || excerpt(post.path)}
+
 - var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 - function format_date(d){
   - var D = new Date(d)
@@ -109,16 +111,16 @@ mixin link(post)
     else
       = title(post)
 
-mixin date_label(date)
+mixin dateLabel(date)
   if date
     div.date(data-raw=date)= format_date(date)
     | 
 
-mixin post_summary(post)
+mixin postCard(post)
   .post-summary
     mixin link(post)
-    mixin date_label(post.date)
-    div.excerpt!= excerpt(post.path)
+    mixin dateLabel(post.date)
+    div.excerpt!= summary(post)
 
 mixin nav(path)
   each post in childrenOf(path)
