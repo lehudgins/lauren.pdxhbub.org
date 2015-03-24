@@ -8,7 +8,7 @@ compile:
 	harp compile
 	
 upload: 
-	rsync -avz www/ lhudgins_laurenhudginsnext@ssh.phx.nearlyfreespeech.net:./
+	rsync -avz --exclude='.git/' www/ lhudgins_laurenhudginsnext@ssh.phx.nearlyfreespeech.net:./
 
 deploy: compile upload
 
