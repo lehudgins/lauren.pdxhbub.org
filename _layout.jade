@@ -27,7 +27,7 @@ html(lang='en')
           +link(getPost(['README']))
             i.fa.fa-file-text
         block section-nav
-          if childrenOf(currentPost.path.slice(0,1)).length > 0
+          if (currentPost.path.length > 0 && childrenOf(currentPost.path.slice(0,1)).length > 0)
             nav.section
               +nav(currentPost.path.slice(0,1))
         h1= title(currentPost)
