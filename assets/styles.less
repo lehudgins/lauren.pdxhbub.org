@@ -25,7 +25,7 @@ html {
 @large: ~"min-width:950px";
 
 @gutter: 10px;
-
+@padding: @gutter/2;
 // document
 
 body{
@@ -86,6 +86,18 @@ h4 {
   color: @color4;
 }
 
+header {
+  margin-bottom: @gutter;
+  background: @dusk;
+  color: @white;
+  a, a:visited {
+    color: @white;
+  }
+  a:hover, a.active {
+    background: @color5;
+  }
+}
+
 .content img {
   max-width: 100%;
   max-height: 80vh;
@@ -101,31 +113,34 @@ nav {
   // margin-bottom: @gutter;
   .serif;
   > * {
-    padding: @gutter;
+    padding: @padding;
   }
 
   > .search {
-    padding: 5px;
+    padding: 0;
     input {
-      padding: 5px;
-      width: 7em;
+      padding: @padding;
+      width: 6em;
     }
   }
 }
 
-header {
-  margin-bottom: @gutter;
+nav.brand {
+  > h1 {
+    font-size: 2.2em;
+  }
 }
+
 nav.primary, nav.brand {
   // border-bottom: @frame;
-  font-size: 1.5em;
+  font-size: 1.2em;
   a {
     text-decoration: none;
   }
 }
 
 nav.section {
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 input {
@@ -133,6 +148,7 @@ input {
   appearance: none;
   border-radius: 5px;  
   box-shadow: 0 1px 5px rgba(0,0,0,0.2) inset;
+  color: @black;
   &:focus {
     outline: none;
     box-shadow: 0 -1px 1px rgba(255,255,255,0.25), 0 1px 5px rgba(0,0,0,0.15);
