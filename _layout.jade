@@ -24,11 +24,12 @@ html(lang='en')
           a(href="https://www.pinterest.com/lehudgins/" title="Lauren Hudgins on Pinterest"): i.fa.fa-pinterest
           a(href="https://plus.google.com/u/0/+LaurenHudgins/posts" title="Lauren Hudgins on Google+"): i.fa.fa-google-plus
           a(href="https://instagram.com/laurenhudgins/" title="Lauren Hudgins on Instagram"): i.fa.fa-instagram
-          +link(getPost(['README']))
-            i.fa.fa-file-text
+          +link(getPost(['dash']))
+            i.fa.fa-keyboard-o
         block section-nav
           if (currentPost.path.length > 0 && childrenOf(currentPost.path.slice(0,1)).length > 0)
             nav.section
+              .label In this section:
               +nav(currentPost.path.slice(0,1))
         h1= title(currentPost)
       .content
