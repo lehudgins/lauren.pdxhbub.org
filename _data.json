@@ -15,6 +15,10 @@
   "dash": {
     "index": false
   },
+  "styleguide": {
+    "index": false,
+    "description": "Living styleguide for LaurenHudgins.com"
+  },
   "sitemap": {
     "layout": false,
     "index": false
