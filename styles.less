@@ -80,6 +80,14 @@ a, a:visited {
   color: @fuchia;
 }
 
+a.active {
+  color: @green;
+}
+
+a:hover {
+  color: @green;
+}
+
 .container {
   padding: 0 20px 0;
   margin: 0;  
@@ -111,11 +119,6 @@ h4 {
   color: @color4;
 }
 
-a.active {
-  background: @pale;
-  // color: @peach;
-}
-
 .wrapper.primary-nav {
   // background: @black;
 }
@@ -125,18 +128,16 @@ nav {
   justify-content: space-around;
   flex-flow: row wrap;
   margin-bottom: 10px;
-  // line-height: 1.2em;
-  // .serif;
-  border-bottom: @frame;
-  font-size: 1.5em;
-  &.section {
-    font-size: 1.2em;
-    
-  }
+  .serif;
   > * {
     padding: 10px;
     text-decoration: none;
   }
+  > a:hover, a:hover > i {
+    text-decoration: underline;
+  }
+
+
   > .search {
     padding: 5px;
     input {
@@ -144,6 +145,15 @@ nav {
       width: 7em;
     }
   }
+}
+
+nav.primary {
+  border-bottom: @frame;
+  font-size: 1.5em;
+}
+
+nav.section {
+  font-size: 1.2em;
 }
 
 input {
