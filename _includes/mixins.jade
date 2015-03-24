@@ -73,7 +73,7 @@
   - return path.length <= currentPath.length && href(currentPath.slice(0, path.length)) == href(path) }
 
 - function excerpt(path) {
-  - var depth = currentPost().path.length
+  - var depth = current.path.length
   - var pathToRoot = Array(depth).join("../");
   - var content = partial(pathToRoot + path.join('/')) || ""
   - if(content.indexOf("<!-- more -->") == -1) return content
