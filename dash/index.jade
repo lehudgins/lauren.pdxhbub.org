@@ -2,18 +2,12 @@ include ../_includes/mixins
 .readme
   != partial("../README") || ""
 table.posts
-  thead
-    tr
-      td title
-      //- td status
-      td description
-      td edit
   tbody
     each post in allPosts([], public)
       tr
         td
-          = title(post)
+          +link(post)
         td
-          a(href=metadataEditURL(post.path))= post.description? "Yes" : "No"
+          a(href=editURL(post.path)).plain: span.icon-quill
         td
-          a(href=editURL(post.path)): i.fa.fa-edit
+          a(href=metadataEditURL(post.path)).plain: span.icon-price-tag

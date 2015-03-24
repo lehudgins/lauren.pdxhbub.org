@@ -43,6 +43,7 @@
   - var section = subtree(path.slice(0,-1))
   - var post = section && section._data && section._data[slug(path)] || {}
   - post.path = path
+  - if (path.length === 1 && path[0] === 'index' ) post.path = []
   - return post }
 
 - function getCurrentPost(){
@@ -70,6 +71,7 @@
 
 - function active(path) { // is {path} an ancestor of {currentPost().path}?
   - var currentPath = getCurrentPost().path
+  - if (path.length === 0) return currentPath.length === 0;
   - return path.length <= currentPath.length && href(currentPath.slice(0, path.length)) == href(path) }
 
 - function excerpt(path) {
@@ -85,6 +87,9 @@
 - function format_date(d){
   - var D = new Date(d)
   - return months[D.getMonth()]+' '+D.getDate()+', '+D.getFullYear() }
+
+- function isSection(post) { 
+  - return post.path.length === 1 && post.path[0] !== 'index'  }
 
 - function sectionHasFile(section, file) { 
   - return section && section._contents && (section._contents.indexOf(file) !== -1) }
@@ -117,8 +122,8 @@ mixin dateLabel(date)
     | 
 
 mixin postCard(post)
-  .post-summary
-    mixin link(post)
+  .card
+    h2: mixin link(post)
     mixin dateLabel(post.date)
     div.excerpt!= summary(post)
 

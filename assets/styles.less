@@ -2,68 +2,15 @@
 @import url("icomoon/style.css");
 @import (inline) url("//fonts.googleapis.com/css?family=Quattrocento+Sans:400,400italic,700,700italic|Quattrocento:400,700");
 
-// colors
-
-@dusk: #5C6063;
-@maroon: #9E5F68;
-@pale: #EFDCD3;
-@color4: #6B575E;
-@color5: #AA979E;
-@light-plum: #A2727C;
-@peach: #FED5CC;
-@color8: #E4A196;
-@fuchia: #B9006E;
-@green: #0D7D86;
-
-@white: lighten(@pale, 8%);
-@black: darken(@green, 8%);
-
-// Color assignments
-@brand-primary: @light-plum;
-@brand-accent: @fuchia;
-
-@frame: 1px solid @green;
-
-// Styleguide
-.swatch {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
-.dusk {
-  background: @dusk;
-}
-.maroon {
-  background: @maroon;
-}
-.pale {
-  background: @pale;
-}
-.light-plum {
-  background: @light-plum;
-}
-.color4 {
-  background: @color4;
-}
-.color5 {
-  background: @color5;
-}
-.peach {
-  background: @peach;
-}
-.green {
-  background: @green;
-}
-.fuchia {
-  background: @fuchia;
-}
-.green {
-  background: @green;
-}
-.black {
-  background: @black;
-}
+@import '_colors';
+@import '_styleguide';
 
 .sans() {
   font-family: 'Quattrocento Sans', sans-serif;  
@@ -72,12 +19,24 @@
   font-family: "Quattrocento" serif;
 }
 
+// Breakpoints
+// Source: http://blog.scur.pl/2012/06/variable-media-queries-less-css/
+@medium: ~"min-width:530px";
+@large: ~"min-width:950px";
+
+@gutter: 10px;
+
 // document
 
 body{
   .sans;
   color: @black;
   background-color: @white;
+}
+
+.container {
+  padding: 0 20px 0;
+  margin: 0;  
 }
 
 a, a:visited {
@@ -92,23 +51,27 @@ a:hover {
   color: @green;
 }
 
-.container {
-  padding: 0 20px 0;
-  margin: 0;  
+// for icons etc
+a.plain {
+  text-decoration: none;
 }
 
 h1, h2, h3, h4, h5 {
   .serif;
+  a {
+    text-decoration: none;
+  }
 }
 
 h1{
   color: @dusk;
   font-weight: normal;
-  border-bottom: @frame;
+  // border-bottom: @frame;
   text-align: center;
   font-size: 65px;
   line-height: 1.2em;
-  padding: 20px 0;
+  // padding: 20px 0;
+  margin: 0;
 }
 
 h2 {
@@ -123,24 +86,23 @@ h4 {
   color: @color4;
 }
 
-.wrapper.primary-nav {
-  // background: @black;
+.content img {
+  max-width: 100%;
+  max-height: 80vh;
+  display: block;
+  margin: @gutter auto;
 }
 
 nav {
   display: flex;
   justify-content: space-around;
   flex-flow: row wrap;
-  margin-bottom: 10px;
+  align-items: baseline;
+  // margin-bottom: @gutter;
   .serif;
   > * {
-    padding: 10px;
-    text-decoration: none;
+    padding: @gutter;
   }
-  > a:hover, a:hover > i {
-    text-decoration: underline;
-  }
-
 
   > .search {
     padding: 5px;
@@ -151,9 +113,15 @@ nav {
   }
 }
 
-nav.primary {
-  border-bottom: @frame;
+header {
+  margin-bottom: @gutter;
+}
+nav.primary, nav.brand {
+  // border-bottom: @frame;
   font-size: 1.5em;
+  a {
+    text-decoration: none;
+  }
 }
 
 nav.section {
@@ -175,6 +143,23 @@ input {
   padding: 0 20px 0;
 }
 
+.post-cards {
+	display: flex;
+	flex-flow: row wrap;
+}
+.card {
+  padding: @gutter;
+  width: 100%;
+  @media (@medium) {
+    width: 50%;
+  }
+  @media (@large) {
+    width: 33%;
+  }
+
+}
+
+
 .media-grid {
   display: flex;
   flex-flow: row wrap;
@@ -182,6 +167,6 @@ input {
 }
 .media-item {
   // border: 1px dotted @black;
-  padding: 10px;
+  padding: @gutter;
   text-align: center;
 }

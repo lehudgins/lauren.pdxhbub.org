@@ -7,31 +7,44 @@ html(lang='en')
     meta(name="viewport" content="width=device-width, initial-scale=1")
     if currentPost.description
       meta(name="description" content=currentPost.description)
+    link(rel="stylesheet" href="/assets/styles.css")
   body
     //- include _includes/debug
     header
+      nav.brand
+        h1: +link(getPost(['index']))
+        nav.social-media-bar
+          a(href="https://twitter.com/lehudgins" title="Lauren Hudgins on Twitter"): span.icon-twitter
+          a(href="https://www.pinterest.com/lehudgins/" title="Lauren Hudgins on Pinterest"): span.icon-pinterest
+          a(href="https://plus.google.com/u/0/+LaurenHudgins/posts" title="Lauren Hudgins on Google+"): span.icon-google-plus
+          a(href="https://instagram.com/laurenhudgins/" title="Lauren Hudgins on Instagram"): span.icon-instagram
+        .search
+          form(action='http://google.com/cse' )
+            input(type='hidden', name='cx', value='012963123305395825585:f_lcpjzw7ke')
+            input(type='hidden', name='ie', value='UTF-8')
+            input(type='text', name='q' placeholder="search")
       nav.primary
-        .brand Lauren Hudgins
-        //- .search
-        //-   form(action='http://google.com/cse' )
-        //-     input(type='hidden', name='cx', value='012963123305395825585:f_lcpjzw7ke')
-        //-     input(type='hidden', name='ie', value='UTF-8')
-        //-     input(type='text', name='q' placeholder="search")
+        //- +link(getPost(['dash']))
+        //-   span.icon-quill
         +nav([])
-        a(href="https://twitter.com/lehudgins" title="Lauren Hudgins on Twitter"): span.icon-twitter
-        a(href="https://www.pinterest.com/lehudgins/" title="Lauren Hudgins on Pinterest"): span.icon-pinterest
-        a(href="https://plus.google.com/u/0/+LaurenHudgins/posts" title="Lauren Hudgins on Google+"): span.icon-google-plus
-        a(href="https://instagram.com/laurenhudgins/" title="Lauren Hudgins on Instagram"): span.icon-instagram
-        +link(getPost(['dash']))
-          span.icon-quill
+    .content
+      h1= title(currentPost)
       block section-nav
         if (currentPost.path.length > 0 && childrenOf(currentPost.path.slice(0,1)).length > 0)
           nav.section
-            .label In this section:
+            if !isSection(currentPost)
+              .label More on 
+                +link(getPost(currentPost.path.slice(0,1)))
+                | :
             +nav(currentPost.path.slice(0,1))
-      h1= title(currentPost)
-    .content
+
       block content
         != yield
-    link(rel="stylesheet" href="/assets/styles.css")
+      block section-nav
+        if (currentPost.path.length > 0 && childrenOf(currentPost.path.slice(0,1)).length > 0)
+          nav.section
+            .label More on 
+              +link(getPost(currentPost.path.slice(0,1)))
+              | :
+            +nav(currentPost.path.slice(0,1))
     include _includes/analytics
