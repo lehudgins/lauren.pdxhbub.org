@@ -73,5 +73,3 @@ Redirect 301 /demo-redirect /
 <IfModule mod_mime.c>
     AddEncoding gzip              svgz
 </IfModule>
-
-</IfModule>
