@@ -1,4 +1,4 @@
-##A list of publications by Lauren Hudgins avaible online
+##A list of publications by Lauren Hudgins available online
 
 <a href="http://www.pastemagazine.com/articles/2015/01/cream-of-maggot-soup.html" target="_blank">Cream of Maggot Soup</a> *Paste Magazine* January 5, 2015
 A terrible experience cooking with foraged oyster mushrooms.
