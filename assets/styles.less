@@ -36,7 +36,8 @@ body{
 
 .container {
   padding: 0 20px 0;
-  margin: 0;  
+  margin: 0 auto;
+  max-width: 950px;
 }
 
 a, a:visited {
@@ -138,7 +139,6 @@ nav {
 }
 
 nav.primary {
-  background-color: @dusk;
   a {
     border-radius: @radius;    
   }
@@ -146,6 +146,11 @@ nav.primary {
     color: @white;
     background-color: @light-plum;
   }
+}
+
+.primary-bar {
+  background-color: @dusk;
+  
 }
 
 nav.social-media {

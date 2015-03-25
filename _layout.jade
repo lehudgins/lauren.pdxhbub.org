@@ -12,40 +12,52 @@ html(lang='en')
   body
     //- include _includes/debug
     header
-      nav.brand
-        h1: +link(getPost(['index']))
-        .search
-          form(action='http://google.com/cse' )
-            input(type='hidden', name='cx', value='012963123305395825585:f_lcpjzw7ke')
-            input(type='hidden', name='ie', value='UTF-8')
-            input(type='text', name='q' placeholder="search")
       nav.primary
         +link(getPost(['dash']))
           span.icon-quill
         +nav([])
-        nav.social-media
-          a(href="https://twitter.com/lehudgins" title="Lauren Hudgins on Twitter"): span.icon-twitter
-          a(href="https://www.pinterest.com/lehudgins/" title="Lauren Hudgins on Pinterest"): span.icon-pinterest
-          a(href="https://plus.google.com/u/0/+LaurenHudgins/posts" title="Lauren Hudgins on Google+"): span.icon-google-plus
-          a(href="https://instagram.com/laurenhudgins/" title="Lauren Hudgins on Instagram"): span.icon-instagram
+      .container
+        nav.brand
+          h1: +link(getPost(['index']))
+          .search
+            form(action='http://google.com/cse' )
+              input(type='hidden', name='cx', value='012963123305395825585:f_lcpjzw7ke')
+              input(type='hidden', name='ie', value='UTF-8')
+              input(type='text', name='q' placeholder="search")
+      .primary-bar
+        .container
+          nav.primary
+            +nav([])
+            nav.social-media
+              a(href="https://twitter.com/lehudgins" title="Lauren Hudgins on Twitter"): span.icon-twitter
+              a(href="https://www.pinterest.com/lehudgins/" title="Lauren Hudgins on Pinterest"): span.icon-pinterest
+              a(href="https://plus.google.com/u/0/+LaurenHudgins/posts" title="Lauren Hudgins on Google+"): span.icon-google-plus
+              a(href="https://instagram.com/laurenhudgins/" title="Lauren Hudgins on Instagram"): span.icon-instagram
     .content
-      h1= title(currentPost)
-      block section-nav
-        if (currentPost.path.length > 0 && childrenOf(currentPost.path.slice(0,1)).length > 0)
-          nav.section
-            if !isSection(currentPost)
+      .container
+        h1= title(currentPost)
+        block section-nav
+          if (currentPost.path.length > 0 && childrenOf(currentPost.path.slice(0,1)).length > 0)
+            nav.section
+              if !isSection(currentPost)
+                .label More on 
+                  +link(getPost(currentPost.path.slice(0,1)))
+                  | :
+              +nav(currentPost.path.slice(0,1))
+
+        block content
+          != yield
+        block section-nav
+          if (currentPost.path.length > 0 && childrenOf(currentPost.path.slice(0,1)).length > 0)
+            nav.section
               .label More on 
                 +link(getPost(currentPost.path.slice(0,1)))
                 | :
-            +nav(currentPost.path.slice(0,1))
+              +nav(currentPost.path.slice(0,1))
+        nav.editor-links
+          | 
+          a(href=editURL(currentPost.path)).plain: span.icon-quill
+          | 
+          a(href=metadataEditURL(currentPost.path)).plain: span.icon-price-tags
 
-      block content
-        != yield
-      block section-nav
-        if (currentPost.path.length > 0 && childrenOf(currentPost.path.slice(0,1)).length > 0)
-          nav.section
-            .label More on 
-              +link(getPost(currentPost.path.slice(0,1)))
-              | :
-            +nav(currentPost.path.slice(0,1))
     include _includes/analytics
