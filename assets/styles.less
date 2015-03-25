@@ -25,6 +25,7 @@ html {
 
 @gutter: 10px;
 @padding: @gutter/2;
+@radius: @gutter/2;
 // document
 
 body{
@@ -38,12 +39,8 @@ body{
   margin: 0;  
 }
 
-a {
+a, a:visited {
   color: @fuchia;
-}
-
-a:visited {
-  color: initial;
 }
 
 a.active {
@@ -90,7 +87,7 @@ h4 {
 }
 
 header {
-  font-size: 1.2em;
+  font-size: 1em;
   .serif();
   margin-bottom: @gutter;
   background-color: @maroon;
@@ -98,10 +95,6 @@ header {
   a, a:visited {
     color: @white;
     text-decoration: none;
-  }
-  a:hover, a.active {
-    color: @white;
-    background-color: @light-plum;
   }
 }
 
@@ -120,18 +113,23 @@ nav {
   > * {
     padding: @padding;
   }
+  // icon links need extra horizontal space
   > a > span {
     padding: 0 @padding;    
   }
   > h1 {
     font-size: 2.2em;
   }
+  // split the padding for nested navs
   > nav {
-    padding: 0;
+    // margin: (@padding / 2);
+    // padding: (@padding / 2);
+    > * {
+    }
   }
 
   > .search {
-    padding: 0;
+    font-size: 0.8em;
     input {
       padding: @padding;
       width: 7em;
@@ -141,7 +139,21 @@ nav {
 
 nav.primary {
   background-color: @dusk;
-  align-items: stretch;
+  a {
+    border-radius: @radius;    
+  }
+  a:hover, a.active {
+    color: @white;
+    background-color: @light-plum;
+  }
+}
+
+nav.social-media {
+  // background: @fuchia;
+  // border-radius: @radius;
+  a:hover {
+    background-color: lighten(@fuchia, 10%);
+  }
 }
 
 input {
