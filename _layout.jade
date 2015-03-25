@@ -8,6 +8,7 @@ html(lang='en')
     if currentPost.description
       meta(name="description" content=currentPost.description)
     link(rel="stylesheet" href="/assets/styles.css")
+    link(rel="stylesheet" href="//fonts.googleapis.com/css?family=Quattrocento+Sans:400,400italic,700,700italic|Quattrocento:400,700")
   body
     //- include _includes/debug
     header
@@ -19,8 +20,8 @@ html(lang='en')
             input(type='hidden', name='ie', value='UTF-8')
             input(type='text', name='q' placeholder="search")
       nav.primary
-        //- +link(getPost(['dash']))
-        //-   span.icon-quill
+        +link(getPost(['dash']))
+          span.icon-quill
         +nav([])
         nav.social-media
           a(href="https://twitter.com/lehudgins" title="Lauren Hudgins on Twitter"): span.icon-twitter
