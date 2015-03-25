@@ -55,8 +55,8 @@ html(lang='en')
               +nav(currentPost.path.slice(0,1))
         nav.editor-links
           | 
-          a(href=editURL(currentPost.path)).plain: span.icon-quill
+          +editLink(currentPost.path)
           | 
-          a(href=metadataEditURL(currentPost.path)).plain: span.icon-price-tags
+          +metadataEditLink(currentPost.path)
 
     include _includes/analytics
