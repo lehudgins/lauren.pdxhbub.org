@@ -1,8 +1,5 @@
 include mixins
 
-mixin printVal(val)
-  pre= JSON.stringify(val, null, 2)
-
 script.
   var showDebug = function(){
     document.getElementById('debug').style.display = 'block';

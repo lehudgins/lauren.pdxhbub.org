@@ -130,3 +130,6 @@ mixin postCard(post)
 mixin nav(path)
   each post in childrenOf(path)
     mixin link(post)
+
+mixin printVal(val)
+  pre= JSON.stringify(val, null, 2)
