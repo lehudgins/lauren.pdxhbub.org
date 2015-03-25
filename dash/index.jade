@@ -8,6 +8,7 @@ table.posts
         td
           +link(post)
         td
-          a(href=editURL(post.path)).plain: span.icon-quill
+          +editLink(post.path)
         td
-          a(href=metadataEditURL(post.path)).plain: span.icon-price-tag
+          +metadataEditLink(post.path)
+          

@@ -94,18 +94,6 @@
 - function sectionHasFile(section, file) { 
   - return section && section._contents && (section._contents.indexOf(file) !== -1) }
 
-- function sourcePath(path) {
-  - var section = subtree(path.slice(0,-1))
-  - if (sectionHasFile(section, slug(path)+'.html')) {
-    - return path
-  - } else if (sectionHasFile(section[slug(path)], 'index.html')) {
-    - return path.concat('index')
-  - }
-- }
-
-- function editURL(path) {
-  - return editBaseURL + sourcePath(path).join('/') + '.md' }
-
 - function metadataEditURL(path) {
   - return editBaseURL + path.slice(0,-1).concat('_data.json').join('/') }
 
@@ -115,6 +103,30 @@ mixin link(post)
       block
     else
       = title(post)
+
+mixin editLink(path)
+  - var sourcePath, fileExists
+  - var section = subtree(path.slice(0,-1))
+  - if (sectionHasFile(section, slug(path)+'.html')) {
+    - sourcePath = path
+    - fileExists = true
+  - } else if (sectionHasFile(section[slug(path)], 'index.html')) {
+    - sourcePath = path.concat('index')
+    - fileExists = true
+  - } else {
+    - sourcePath = path
+    - fileExists = false
+  - }
+  - var url = editBaseURL + sourcePath.join('/') + '.md'
+  a(href=url).plain
+    if fileExists
+      span.icon-quill
+    else
+      | + 
+
+mixin metadataEditLink(path)
+  a(href=metadataEditURL(path)).plain: span.icon-price-tag
+
 
 mixin dateLabel(date)
   if date

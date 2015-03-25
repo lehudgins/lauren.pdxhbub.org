@@ -53,10 +53,10 @@ html(lang='en')
                 +link(getPost(currentPost.path.slice(0,1)))
                 | :
               +nav(currentPost.path.slice(0,1))
-        //- nav.editor-links
-        //-   | 
-        //-   a(href=editURL(currentPost.path)).plain: span.icon-quill
-        //-   | 
-        //-   a(href=metadataEditURL(currentPost.path)).plain: span.icon-price-tags
+        nav.editor-links
+          | 
+          a(href=editURL(currentPost.path)).plain: span.icon-quill
+          | 
+          a(href=metadataEditURL(currentPost.path)).plain: span.icon-price-tags
 
     include _includes/analytics
