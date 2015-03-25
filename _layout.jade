@@ -13,9 +13,6 @@ html(lang='en')
     //- include _includes/debug
     header
       nav.primary
-        +link(getPost(['dash']))
-          span.icon-quill
-        +nav([])
       .container
         nav.brand
           h1: +link(getPost(['index']))
@@ -27,6 +24,8 @@ html(lang='en')
       .primary-bar
         .container
           nav.primary
+            +link(getPost(['dash']))
+              span.icon-quill
             +nav([])
             nav.social-media
               a(href="https://twitter.com/lehudgins" title="Lauren Hudgins on Twitter"): span.icon-twitter
@@ -54,10 +53,10 @@ html(lang='en')
                 +link(getPost(currentPost.path.slice(0,1)))
                 | :
               +nav(currentPost.path.slice(0,1))
-        nav.editor-links
-          | 
-          a(href=editURL(currentPost.path)).plain: span.icon-quill
-          | 
-          a(href=metadataEditURL(currentPost.path)).plain: span.icon-price-tags
+        //- nav.editor-links
+        //-   | 
+        //-   a(href=editURL(currentPost.path)).plain: span.icon-quill
+        //-   | 
+        //-   a(href=metadataEditURL(currentPost.path)).plain: span.icon-price-tags
 
     include _includes/analytics
